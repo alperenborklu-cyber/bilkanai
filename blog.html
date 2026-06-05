@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-tr="Blog – Bilkan AI | Yapay Zeka İçgörüleri" data-en="Blog – Bilkan AI | AI Insights">Blog – Bilkan AI | Yapay Zeka İçgörüleri</title>
+  <meta name="description" content="Bilkan AI Blog: Eğitim, sağlık, finans ve ticarette yapay zekanın geleceğini şekillendiren içgörüler ve rehberler." data-tr-content="Bilkan AI Blog: Eğitim, sağlık, finans ve ticarette yapay zekanın geleceğini şekillendiren içgörüler ve rehberler." data-en-content="Bilkan AI Blog: Insights and guides shaping the future of AI in education, healthcare, finance, and commerce.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+  <!-- Neural Canvas Background -->
+  <canvas id="neural-canvas"></canvas>
+  <div class="glow-orb orb-purple"></div>
+  <div class="glow-orb orb-blue"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="bilkan ai_logo.png" alt="Bilkan AI Logo" class="logo-img">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html#hizmetler" data-tr="Hizmetler" data-en="Services">Hizmetler</a></li>
+          <li><a href="index.html#sektorler" data-tr="Sektörler" data-en="Sectors">Sektörler</a></li>
+          <li><a href="index.html#hakkimizda" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
+          <li><a href="blog.html" class="nav-active" data-tr="Blog" data-en="Blog">Blog</a></li>
+          <li><a href="index.html#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="lang-switch" class="lang-btn" aria-label="Language Switcher">EN</button>
+        <a href="index.html#iletisim" class="cta-btn" data-tr="Bize Ulaşın" data-en="Contact Us">Bize Ulaşın</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Blog Hero -->
+  <section class="blog-hero">
+    <div class="container">
+      <div class="blog-hero-content">
+        <span class="section-label" data-tr="Bilkan AI Blog" data-en="Bilkan AI Blog">Bilkan AI Blog</span>
+        <h1 class="blog-hero-title" data-tr="Yapay Zeka ile<br>Geleceği Anlıyoruz" data-en="Understanding the<br>Future with AI">Yapay Zeka ile<br>Geleceği Anlıyoruz</h1>
+        <p class="blog-hero-desc" data-tr="Eğitim, sağlık, finans ve ticarette yapay zekanın iş dünyasını nasıl dönüştürdüğünü keşfedin. Uzmanlarımızdan sektörel içgörüler ve uygulanabilir rehberler." data-en="Discover how artificial intelligence is transforming the business world in education, healthcare, finance, and commerce. Sectoral insights and actionable guides from our experts.">Eğitim, sağlık, finans ve ticarette yapay zekanın iş dünyasını nasıl dönüştürdüğünü keşfedin. Uzmanlarımızdan sektörel içgörüler ve uygulanabilir rehberler.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Cards Grid -->
+  <section class="blog-cards-section">
+    <div class="container">
+      <div class="blog-grid" id="blog-grid">
+
+        <!-- Card 1 -->
+        <article class="blog-card" onclick="openPost('post-1')" style="--card-accent: hsl(270,95%,65%);">
+          <div class="blog-card-img-wrap">
+            <img src="blog_egitim.png" alt="Eğitimde Yapay Zeka" class="blog-card-img">
+            <span class="blog-card-category" data-tr="🎓 Eğitim" data-en="🎓 Education">🎓 Eğitim</span>
+          </div>
+          <div class="blog-card-body">
+            <h2 class="blog-card-title" data-tr="2026'da Özel Okullar İçin Yapay Zeka Destekli Kişiselleştirilmiş Öğrenme Platformu Nasıl Kurulur?" data-en="How to Set Up an AI-Powered Personalized Learning Platform for Private Schools in 2026?">2026'da Özel Okullar İçin Yapay Zeka Destekli Kişiselleştirilmiş Öğrenme Platformu Nasıl Kurulur?</h2>
+            <p class="blog-card-excerpt" data-tr="Her öğrencinin öğrenme hızı farklıdır. Yapay zeka destekli platformlar, bireysel müfredat yolları çizerek akademik başarıyı kökten değiştiriyor." data-en="Every student's learning speed is different. AI-powered platforms change academic success by charting personalized curriculum paths.">Her öğrencinin öğrenme hızı farklıdır. Yapay zeka destekli platformlar, bireysel müfredat yolları çizerek akademik başarıyı kökten değiştiriyor.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-read" data-tr="Okumaya Devam Et →" data-en="Continue Reading →">Okumaya Devam Et →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="blog-card" onclick="openPost('post-2')" style="--card-accent: hsl(185,100%,50%);">
+          <div class="blog-card-img-wrap">
+            <img src="blog_saglik.png" alt="Sağlıkta Yapay Zeka" class="blog-card-img">
+            <span class="blog-card-category" data-tr="🏥 Sağlık" data-en="🏥 Healthcare">🏥 Sağlık</span>
+          </div>
+          <div class="blog-card-body">
+            <h2 class="blog-card-title" data-tr="Hastanelerde Teşhis Sürelerini Kısaltan Yapay Zeka Tabanlı Sağlık Çözümleri Nelerdir?" data-en="What are the AI-Based Healthcare Solutions that Shorten Diagnosis Times in Hospitals?">Hastanelerde Teşhis Sürelerini Kısaltan Yapay Zeka Tabanlı Sağlık Çözümleri Nelerdir?</h2>
+            <p class="blog-card-excerpt" data-tr="Radyoloji görüntülemeden triyaj asistanlarına kadar, yapay zeka sağlık sektöründe hayat kurtaran devrim yapıyor." data-en="From radiology imaging to triage assistants, artificial intelligence is making a life-saving revolution in the healthcare sector.">Radyoloji görüntülemeden triyaj asistanlarına kadar, yapay zeka sağlık sektöründe hayat kurtaran devrim yapıyor.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-read" data-tr="Okumaya Devam Et →" data-en="Continue Reading →">Okumaya Devam Et →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="blog-card" onclick="openPost('post-3')" style="--card-accent: hsl(145,100%,50%);">
+          <div class="blog-card-img-wrap">
+            <img src="blog_finans.png" alt="Finansta Yapay Zeka" class="blog-card-img">
+            <span class="blog-card-category" data-tr="📈 Finans" data-en="📈 Finance">📈 Finans</span>
+          </div>
+          <div class="blog-card-body">
+            <h2 class="blog-card-title" data-tr="Borsada Yatırım Kararlarını Optimize Eden Yapay Zeka ile Finansal Tahmin Modelleri Nasıl Çalışır?" data-en="How Do Financial Prediction Models Work with AI to Optimize Investment Decisions in the Stock Market?">Borsada Yatırım Kararlarını Optimize Eden Yapay Zeka ile Finansal Tahmin Modelleri Nasıl Çalışır?</h2>
+            <p class="blog-card-excerpt" data-tr="LSTM, Transformer ve pekiştirmeli öğrenme modellerinin birleşimi yatırım kararlarını nasıl köklü biçimde değiştiriyor?" data-en="How does the combination of LSTM, Transformer, and reinforcement learning models fundamentally change investment decisions?">LSTM, Transformer ve pekiştirmeli öğrenme modellerinin birleşimi yatırım kararlarını nasıl köklü biçimde değiştiriyor?</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-read" data-tr="Okumaya Devam Et →" data-en="Continue Reading →">Okumaya Devam Et →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="blog-card" onclick="openPost('post-4')" style="--card-accent: hsl(215,100%,55%);">
+          <div class="blog-card-img-wrap">
+            <img src="blog_eticaret.png" alt="E-ticarette Yapay Zeka" class="blog-card-img">
+            <span class="blog-card-category" data-tr="🛒 E-Ticaret" data-en="🛒 E-Commerce">🛒 E-Ticaret</span>
+          </div>
+          <div class="blog-card-body">
+            <h2 class="blog-card-title" data-tr="2026'da E-ticaret Siteleri İçin Müşteri Kaybını Önleyen Yapay Zeka Öneri Motoru Nasıl Geliştirilir?" data-en="How to Develop an AI Recommendation Engine that Prevents Customer Churn for E-commerce Sites in 2026?">2026'da E-ticaret Siteleri İçin Müşteri Kaybını Önleyen Yapay Zeka Öneri Motoru Nasıl Geliştirilir?</h2>
+            <p class="blog-card-excerpt" data-tr="Sepet terk oranını %68'den %42'ye düşüren öneri motorunun arkasındaki teknik mimari ve gerçek dünya senaryoları." data-en="The technical architecture and real-world scenarios behind the recommendation engine that drops cart abandonment from 68% to 42%.">Sepet terk oranını %68'den %42'ye düşüren öneri motorunun arkasındaki teknik mimari ve gerçek dünya senaryoları.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-read" data-tr="Okumaya Devam Et →" data-en="Continue Reading →">Okumaya Devam Et →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="blog-card" onclick="openPost('post-5')" style="--card-accent: hsl(30,100%,60%);">
+          <div class="blog-card-img-wrap">
+            <img src="blog_maliyet.png" alt="Yapay Zeka Maliyeti" class="blog-card-img">
+            <span class="blog-card-category" data-tr="💰 Maliyet & ROI" data-en="💰 Cost & ROI">💰 Maliyet & ROI</span>
+          </div>
+          <div class="blog-card-body">
+            <h2 class="blog-card-title" data-tr="Eğitim, Sağlık ve Finans Sektörlerinde Yapay Zeka ile İş Süreçlerini Optimize Etmenin Maliyeti Nedir?" data-en="What is the Cost of Optimizing Business Processes with AI in Education, Healthcare, and Finance Sectors?">Eğitim, Sağlık ve Finans Sektörlerinde Yapay Zeka ile İş Süreçlerini Optimize Etmenin Maliyeti Nedir?</h2>
+            <p class="blog-card-excerpt" data-tr="Sektörlere göre gerçekçi maliyet tablosu, gizli masraflar ve geri ödeme süreleri — vaka çalışmaları ile." data-en="Realistic cost tables by sector, hidden expenses, and payback periods — with case studies.">Sektörlere göre gerçekçi maliyet tablosu, gizli masraflar ve geri ödeme süreleri — vaka çalışmaları ile.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-read" data-tr="Okumaya Devam Et →" data-en="Continue Reading →">Okumaya Devam Et →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="blog-card" onclick="openPost('post-6')" style="--card-accent: hsl(300,90%,65%);">
+          <div class="blog-card-img-wrap">
+            <img src="blog_karar.png" alt="Karar Destek Sistemleri" class="blog-card-img">
+            <span class="blog-card-category" data-tr="🧠 Karar Destek" data-en="🧠 Decision Support">🧠 Karar Destek</span>
+          </div>
+          <div class="blog-card-body">
+            <h2 class="blog-card-title" data-tr="Finans ve Ticaret Yöneticileri İçin Veriye Dayalı Karar Alma Süreçlerini Destekleyen Yapay Zeka Araçları Hangileridir?" data-en="Which AI Tools Support Data-Driven Decision-Making Processes for Finance and Commerce Managers?">Finans ve Ticaret Yöneticileri İçin Veriye Dayalı Karar Alma Süreçlerini Destekleyen Yapay Zeka Araçları Hangileridir?</h2>
+            <p class="blog-card-excerpt" data-tr="Talep tahmini, nakit akışı simülatörü, fiyat optimizasyonu ve CLV tahmini: yöneticiler için AI araç seti." data-en="Demand forecasting, cash flow simulator, price optimization, and CLV prediction: the AI toolkit for managers.">Talep tahmini, nakit akışı simülatörü, fiyat optimizasyonu ve CLV tahmini: yöneticiler için AI araç seti.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-read" data-tr="Okumaya Devam Et →" data-en="Continue Reading →">Okumaya Devam Et →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="blog-card" onclick="openPost('post-7')" style="--card-accent: hsl(200,100%,55%);">
+          <div class="blog-card-img-wrap">
+            <img src="blog_ozel.png" alt="Özel Yapay Zeka Geliştirme" class="blog-card-img">
+            <span class="blog-card-category" data-tr="⚙️ Özel Geliştirme" data-en="⚙️ Custom Dev">⚙️ Özel Geliştirme</span>
+          </div>
+          <div class="blog-card-body">
+            <h2 class="blog-card-title" data-tr="Hazır Yazılımların Yetmediği Durumlar İçin Özel Yapay Zeka Uygulaması Geliştirmek Ne Kadar Sürer?" data-en="How Long Does It Take to Develop a Custom AI Application When Ready-Made Software is Not Enough?">Hazır Yazılımların Yetmediği Durumlar İçin Özel Yapay Zeka Uygulaması Geliştirmek Ne Kadar Sürer?</h2>
+            <p class="blog-card-excerpt" data-tr="Keşiften canlıya alma aşamasına kadar 5 aşamalı metodoloji ve gerçek proje süreleri ile zaman çizelgeleri." data-en="A 5-phase methodology from discovery to launch, along with real project durations and timelines.">Keşiften canlıya alma aşamasına kadar 5 aşamalı metodoloji ve gerçek proje süreleri ile zaman çizelgeleri.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-read" data-tr="Okumaya Devam Et →" data-en="Continue Reading →">Okumaya Devam Et →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="blog-card" onclick="openPost('post-8')" style="--card-accent: hsl(160,100%,45%);">
+          <div class="blog-card-img-wrap">
+            <img src="blog_kobi.png" alt="KOBİ Yapay Zeka Yatırımı" class="blog-card-img">
+            <span class="blog-card-category" data-tr="🚀 KOBİ & Yatırım" data-en="🚀 SMB & Investment">🚀 KOBİ & Yatırım</span>
+          </div>
+          <div class="blog-card-body">
+            <h2 class="blog-card-title" data-tr="2026 Trendleri: Türkiye'de KOBİ'lerin Yapay Zeka Yatırımından Gerçekçi Getiri Beklentileri Neler Olmalı?" data-en="2026 Trends: What Should Be Realistic Return Expectations from AI Investment for SMBs in Turkey?">2026 Trendleri: Türkiye'de KOBİ'lerin Yapay Zeka Yatırımından Gerçekçi Getiri Beklentileri Neler Olmalı?</h2>
+            <p class="blog-card-excerpt" data-tr="Sektöre ve ölçeğe göre gerçekçi ROI beklentileri, KOBİ yatırım paketleri ve Bilkanai'nin 24 ay geri ödeme garantisi." data-en="Realistic ROI expectations by sector and scale, SMB investment packages, and Bilkanai's 24-month payback guarantee.">Sektöre ve ölçeğe göre gerçekçi ROI beklentileri, KOBİ yatırım paketleri ve Bilkanai'nin 24 ay geri ödeme garantisi.</p>
+            <div class="blog-card-footer">
+              <span class="blog-card-read" data-tr="Okumaya Devam Et →" data-en="Continue Reading →">Okumaya Devam Et →</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== POST MODAL OVERLAY ====== -->
+  <div class="post-overlay" id="post-overlay" onclick="closePost(event)">
+    <div class="post-modal" id="post-modal">
+      <button class="post-close" onclick="closePost(null, true)" aria-label="Kapat">✕</button>
+      <div class="post-modal-inner" id="post-modal-inner"></div>
+    </div>
+  </div>
+
+  <!-- ====== POST CONTENT TEMPLATES (hidden) ====== -->
+  <div style="display:none">
+
+    <!-- POST 1 TR -->
+    <div id="post-1-tr">
+      <div class="post-hero-img"><img src="blog_egitim.png" alt="Eğitimde Yapay Zeka"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(270,95%,65%)">🎓 Eğitim Odağı</span></div>
+      <h1>2026'da Özel Okullar İçin Yapay Zeka Destekli Kişiselleştirilmiş Öğrenme Platformu Nasıl Kurulur?</h1>
+      <p>Eğitim sektörü, son 5 yılda dijital dönüşümün en hızlı yaşandığı alanların başında geliyor. Özellikle özel okullar, öğrenci memnuniyetini ve akademik başarıyı artırmak için yapay zeka çözümlerine yöneliyor. Peki, 2026 yılında bir özel okul, tamamen kişiselleştirilmiş bir yapay zeka öğrenme platformunu nasıl hayata geçirebilir? İşte adım adım rehber.</p>
+      <h2>Neden Kişiselleştirilmiş Öğrenme?</h2>
+      <p>Her öğrencinin öğrenme hızı, tarzı ve güçlü/zayıf yönleri farklıdır. Geleneksel eğitimde "tek beden herkese uyar" yaklaşımı, birçok öğrencinin potansiyelini tam olarak kullanmasını engeller. Yapay zeka destekli platformlar, öğrencinin:</p>
+      <ul><li>Hangi konularda zorlandığını,</li><li>Hangi saatlerde daha verimli çalıştığını,</li><li>Hangi öğrenme materyallerine (video, metin, interaktif test) daha iyi yanıt verdiğini analiz eder.</li></ul>
+      <h2>Kurulum İçin Gereken Adımlar</h2>
+      <h3>1. İhtiyaç Analizi ve Veri Toplama</h3>
+      <p>Öncelikle okulun mevcut altyapısı değerlendirilir. Öğrencilerin geçmiş sınav sonuçları, devamsızlık kayıtları ve ders içi performans verileri anonimleştirilerek bir veri havuzu oluşturulur. Bu veriler, yapay zeka modelinin eğitilmesi için temel oluşturur.</p>
+      <h3>2. Doğru Yapay Zeka Modelinin Seçilmesi</h3>
+      <p>Bilkanai olarak, her okulun ihtiyacına göre farklı modeller öneriyoruz:</p>
+      <ul><li><strong>Takviyeli öğrenme modelleri:</strong> Öğrencinin doğru cevaplarını ödüllendirerek motive eder.</li><li><strong>Doğal dil işleme (NLP):</strong> Öğrencinin yazılı ödevlerini anlamlandırır ve geri bildirim verir.</li><li><strong>Derin öğrenme:</strong> Öğrencinin uzun vadeli öğrenme kalıplarını analiz eder.</li></ul>
+      <h3>3. Platform Entegrasyonu</h3>
+      <p>Platform, okulun mevcut öğrenme yönetim sistemi (LMS) ile entegre çalışmalıdır. Öğretmenler, platform üzerinden öğrencilerinin anlık ilerleme raporlarını görebilir ve müdahale edebilir.</p>
+      <h3>4. Öğretmen Eğitimi ve Adaptasyon Süreci</h3>
+      <p>Yapay zeka, öğretmenin yerini almaz, onun işini kolaylaştırır. Öğretmenler, platformun raporlarını nasıl okuyacakları ve hangi durumlarda devreye girecekleri konusunda eğitilmelidir.</p>
+      <h3>5. Sürekli İyileştirme ve Güncelleme</h3>
+      <p>Yapay zeka modeli, her yeni veriyle kendini günceller. Bu nedenle platform kurulduktan sonra düzenli bakım & model yeniden eğitimi gerekir.</p>
+      <h2>Örnek Kullanım Senaryosu</h2>
+      <p>Bir özel okulda matematik dersinde öğrencilerin %40'ı kesirler konusunda zorlanmaktadır. Yapay zeka platformu, bu öğrencileri tespit eder ve her birine konuyu anlatan kısa videolar, adım adım çözümlü sorular ve sadece kesirler üzerine interaktif oyunlar önerir. 3 ay sonunda, zorlanan öğrencilerin <strong>%75'i başarı seviyesini ortalama üstüne çıkarır.</strong></p>
+      <h2>2026 Trendleri: Neler Değişecek?</h2>
+      <ul><li><strong>Sesli asistan entegrasyonu:</strong> Öğrenciler, "Sana bir sorum var" diyerek platformla konuşabilecek.</li><li><strong>Duygu analizi:</strong> Yapay zeka, öğrencinin ses tonundan motivasyon düşüklüğünü algılayacak.</li><li><strong>AR/VR ile birleşme:</strong> Soyut konular artırılmış gerçeklikle somut hale getirilecek.</li></ul>
+      <div class="post-cta-box">
+        <h3>Bilkanai Farkı</h3>
+        <p>Biz, sadece bir yazılım sunmuyoruz. Okulunuzun ihtiyaçlarına özel: Veri gizliliği politikaları (KVKK ve GDPR uyumlu), öğretmen eğitim programları, 7/24 teknik destek ve model güncelleme hizmeti sağlıyoruz.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Bize Ulaşın →</a>
+      </div>
+    </div>
+
+    <!-- POST 1 EN -->
+    <div id="post-1-en">
+      <div class="post-hero-img"><img src="blog_egitim.png" alt="AI in Education"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(270,95%,65%)">🎓 Education Focus</span></div>
+      <h1>How to Set Up an AI-Powered Personalized Learning Platform for Private Schools in 2026?</h1>
+      <p>The education sector has been at the forefront of the fastest digital transformation over the past 5 years. Especially private schools are turning to AI solutions to increase student satisfaction and academic success. So, how can a private school implement a fully personalized AI learning platform in 2026? Here is the step-by-step guide.</p>
+      <h2>Why Personalized Learning?</h2>
+      <p>Every student's learning speed, style, and strengths/weaknesses are different. Traditional education's "one size fits all" approach prevents many students from fully realizing their potential. AI-powered platforms analyze the student's:</p>
+      <ul><li>Which subjects they struggle with,</li><li>Which hours they study most productively,</li><li>Which learning materials (video, text, interactive tests) they respond to better.</li></ul>
+      <h2>Steps Required for Setup</h2>
+      <h3>1. Needs Analysis and Data Collection</h3>
+      <p>First, the school's existing infrastructure is evaluated. Students' past exam results, attendance records, and in-class performance data are anonymized to create a data pool. This data forms the basis for training the AI model.</p>
+      <h3>2. Choosing the Right AI Model</h3>
+      <p>As Bilkan AI, we suggest different models according to the needs of each school:</p>
+      <ul><li><strong>Reinforcement learning models:</strong> Motivate students by rewarding correct answers.</li><li><strong>Natural language processing (NLP):</strong> Understand students' written homework and provide feedback.</li><li><strong>Deep learning:</strong> Analyze students' long-term learning patterns.</li></ul>
+      <h3>3. Platform Integration</h3>
+      <p>The platform must work integrated with the school's existing learning management system (LMS). Teachers can see their students' real-time progress reports and intervene when necessary.</p>
+      <h3>4. Teacher Training and Adaptation Process</h3>
+      <p>AI does not replace the teacher; it makes their job easier. Teachers must be trained on how to read the platform's reports and in which situations to intervene.</p>
+      <h3>5. Continuous Improvement and Updates</h3>
+      <p>The AI model updates itself with each new data point. Therefore, regular maintenance and model retraining are required after the platform is set up.</p>
+      <h2>Sample Usage Scenario</h2>
+      <p>In a private school math class, 40% of the students struggle with fractions. The AI platform detects these students and suggests short videos explaining the topic, step-by-step solved questions, and interactive games specifically on fractions for each of them. After 3 months, <strong>75% of the struggling students raise their success level to above average.</strong></p>
+      <h2>2026 Trends: What Will Change?</h2>
+      <ul><li><strong>Voice assistant integration:</strong> Students will be able to speak with the platform, saying "I have a question for you."</li><li><strong>Sentiment analysis:</strong> The AI will detect drops in motivation from the student's tone of voice.</li><li><strong>AR/VR merging:</strong> Abstract subjects will be made concrete with augmented reality.</li></ul>
+      <div class="post-cta-box">
+        <h3>Bilkan AI Difference</h3>
+        <p>We do not just offer software. We provide solutions customized to your school's needs: Data privacy policies (KVKK and GDPR compliant), teacher training programs, 24/7 technical support, and model update services.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Contact Us →</a>
+      </div>
+    </div>
+
+    <!-- POST 2 TR -->
+    <div id="post-2-tr">
+      <div class="post-hero-img"><img src="blog_saglik.png" alt="Sağlıkta Yapay Zeka"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(185,100%,50%)">🏥 Sağlık Odağı</span></div>
+      <h1>Hastanelerde Teşhis Sürelerini Kısaltan Yapay Zeka Tabanlı Sağlık Çözümleri Nelerdir?</h1>
+      <p>Sağlık sektöründe zaman, her şeyden önemlidir. Yanlış veya geç konulan bir teşhis, hayatlara mal olabilir. Yapay zeka, özellikle görüntüleme, laboratuvar sonuçları ve hasta geçmişi analizinde devrim yaratıyor.</p>
+      <h2>Radyoloji ve Görüntüleme: Yapay Zeka Radyologlara Nasıl Yardımcı Olur?</h2>
+      <p><strong>Problem:</strong> Bir radyolog, günde yüzlerce röntgen, MR veya tomografi görüntüsü incelemek zorundadır. İnsan gözü, erken evredeki küçük tümörleri veya kılcal çatlakları kaçırabilir.</p>
+      <p><strong>Çözüm:</strong> Bilkanai'nin geliştirdiği derin öğrenme tabanlı görüntü analiz modelleri, bir görüntüyü saniyeler içinde tarar:</p>
+      <ul><li><strong>Akciğer kanseri taraması:</strong> İnsan gözünün kaçırabileceği 2 mm'lik bir nodülü tespit eder.</li><li><strong>Beyin kanaması:</strong> BT görüntüsünü 30 saniyede analiz eder.</li><li><strong>Kemik kırıkları:</strong> Epifiz plağı bölgesindeki çatlakları %98 doğrulukla bulur.</li></ul>
+      <div class="post-stat-row"><div class="post-stat"><span class="stat-num">45 dk</span><span class="stat-label">Eski teşhis süresi</span></div><div class="post-stat-arrow">→</div><div class="post-stat"><span class="stat-num" style="color:var(--accent-cyan)">8 dk</span><span class="stat-label">AI ile teşhis süresi</span></div></div>
+      <h2>Laboratuvar Sonuçları Analizi</h2>
+      <p>Bir kan tahlilinde 40'tan fazla parametre vardır. Yapay zeka modelimiz, tüm parametreleri birbiriyle ilişkilendirerek gizli enfeksiyonları, metabolik sendrom riskini ve hormonal dengesizlikleri rutin tahlillerde bile yakalayabilir.</p>
+      <h2>Hasta Geçmişi ve Semptom Analizi: Triyajda Devrim</h2>
+      <p>Bilkanai'nin NLP tabanlı triyaj asistanı, hastanın şikayetlerini, geçmiş hastalıklarını, kullandığı ilaçları, yaş ve cinsiyet bilgilerini analiz ederek bir risk skoru üretir.</p>
+      <h2>2026 Trendleri</h2>
+      <ul><li><strong>Giyilebilir cihaz entegrasyonu:</strong> EKG ve uyku verileri anlık analiz edilecek.</li><li><strong>Genetik veri analizi:</strong> Hastalık yatkınlıkları genomdan tahmin edilecek.</li><li><strong>Tele-tıp ile birleşme:</strong> Görüntülü muayenede AI arka planda tanı önerecek.</li></ul>
+      <div class="post-cta-box">
+        <h3>Bilkanai Farkı</h3>
+        <p>Modellerimiz Türk hastanelerinin gerçek verileriyle eğitilmiştir, tıp fakültelerindeki uzman hekimlerle birlikte geliştirilmiştir.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Bize Ulaşın →</a>
+      </div>
+    </div>
+
+    <!-- POST 2 EN -->
+    <div id="post-2-en">
+      <div class="post-hero-img"><img src="blog_saglik.png" alt="AI in Healthcare"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(185,100%,50%)">🏥 Healthcare Focus</span></div>
+      <h1>What are the AI-Based Healthcare Solutions that Shorten Diagnosis Times in Hospitals?</h1>
+      <p>In the healthcare sector, time is everything. A wrong or late diagnosis can cost lives. Artificial intelligence is making a revolution especially in imaging, laboratory results, and patient history analysis.</p>
+      <h2>Radiology and Imaging: How AI Helps Radiologists</h2>
+      <p><strong>Problem:</strong> A radiologist has to examine hundreds of X-ray, MRI, or CT images a day. The human eye can miss small early-stage tumors or hairline fractures.</p>
+      <p><strong>Solution:</strong> Bilkan AI's deep learning-based image analysis models scan an image within seconds:</p>
+      <ul><li><strong>Lung cancer screening:</strong> Detects a 2 mm nodule that the human eye might miss.</li><li><strong>Brain hemorrhage:</strong> Analyzes a CT image in 30 seconds.</li><li><strong>Bone fractures:</strong> Finds fractures in the epiphyseal plate area with 98% accuracy.</li></ul>
+      <div class="post-stat-row"><div class="post-stat"><span class="stat-num">45 min</span><span class="stat-label">Old Diagnosis Time</span></div><div class="post-stat-arrow">→</div><div class="post-stat"><span class="stat-num" style="color:var(--accent-cyan)">8 min</span><span class="stat-label">Diagnosis with AI</span></div></div>
+      <h2>Laboratory Results Analysis</h2>
+      <p>There are over 40 parameters in a blood test. Our AI model correlates all parameters to detect hidden infections, metabolic syndrome risks, and hormonal imbalances even in routine tests.</p>
+      <h2>Patient History and Symptom Analysis: A Revolution in Triage</h2>
+      <p>Bilkan AI's NLP-based triage assistant analyzes the patient's complaints, history, medications, age, and gender info to produce a risk score.</p>
+      <h2>2026 Trends</h2>
+      <ul><li><strong>Wearable device integration:</strong> ECG and sleep data will be analyzed in real-time.</li><li><strong>Genetic data analysis:</strong> Disease predispositions will be predicted from the genome.</li><li><strong>Tele-medicine integration:</strong> AI will recommend diagnoses in the background during video exams.</li></ul>
+      <div class="post-cta-box">
+        <h3>Bilkan AI Difference</h3>
+        <p>Our models are trained on real Turkish hospital data and developed together with medical specialists from top faculties.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Contact Us →</a>
+      </div>
+    </div>
+
+    <!-- POST 3 TR -->
+    <div id="post-3-tr">
+      <div class="post-hero-img"><img src="blog_finans.png" alt="Finansta Yapay Zeka"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(145,100%,50%)">📈 Finans Odağı</span></div>
+      <h1>Borsada Yatırım Kararlarını Optimize Eden Yapay Zeka ile Finansal Tahmin Modelleri Nasıl Çalışır?</h1>
+      <p>Finans piyasaları, yüzlerce değişkenin aynı anda etkileşime girdiği karmaşık bir sistemdir. Yapay zeka ise tüm bu verileri milisaniyeler içinde işler ve en uygun yatırım kararını önerir.</p>
+      <h2>Bilkanai Finans Modeli Nasıl Çalışır?</h2>
+      <h3>Katman 1 – Veri Toplama ve Temizleme</h3>
+      <p>Saniyede 10.000'den fazla veri noktası toplanır: hisse fiyatları, makroekonomik veriler, şirket haberleri ve sosyal medya duygu analizi.</p>
+      <h3>Katman 2 – Öngörü Modelleri</h3>
+      <ul><li><strong>LSTM:</strong> Zaman serisi verilerini analiz eder.</li><li><strong>Transformer modelleri:</strong> Haber metinlerindeki duyguyu sınıflandırır.</li><li><strong>Pekiştirmeli öğrenme:</strong> Sanal ortamda kârı maksimize etmeyi öğrenir.</li><li><strong>Topluluk öğrenmesi:</strong> Üç modelin tahminlerini birleştirerek nihai kararı verir.</li></ul>
+      <h3>Katman 3 – Risk Yönetimi</h3>
+      <p>Her tahminin yanında bir güven aralığı ve beklenen volatilite hesaplanır.</p>
+      <div class="post-stat-row"><div class="post-stat"><span class="stat-num">%67</span><span class="stat-label">Günlük yön tahmini</span></div><div class="post-stat"><span class="stat-num" style="color:var(--accent-cyan)">%71</span><span class="stat-label">Haftalık başarı</span></div><div class="post-stat"><span class="stat-num" style="color:var(--accent-green)">%74</span><span class="stat-label">Aylık başarı</span></div></div>
+      <h2>Gerçek Hayattan Kullanım Senaryoları</h2>
+      <p><strong>Günlük yatırımcı:</strong> Ali Bey, her gün 1 saatini borsaya ayırıyor. Bilkanai mobil uygulaması sabah saat 09:30'da: <em>"Bugün THYAO için alım sinyali. Hedef fiyat: 315 TL, stop-loss: 298 TL."</em></p>
+      <p><strong>Portföy yöneticisi:</strong> Bankacılık hisselerinde anormal alış emri tespit edildiğinde, yapay zeka saatlik olarak ağırlık önerisini günceller.</p>
+      <div class="post-cta-box">
+        <h3>Bilkanai Farkı</h3>
+        <p>Modellerimiz Türkiye piyasalarına özel olarak eğitilmiştir (BIST, VİOP, Döviz). Geçmiş 10 yılın 50 milyondan fazla işlem verisini analiz ettik.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Bize Ulaşın →</a>
+      </div>
+    </div>
+
+    <!-- POST 3 EN -->
+    <div id="post-3-en">
+      <div class="post-hero-img"><img src="blog_finans.png" alt="AI in Finance"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(145,100%,50%)">📈 Finance Focus</span></div>
+      <h1>How Do Financial Prediction Models Work with AI to Optimize Investment Decisions in the Stock Market?</h1>
+      <p>Financial markets are a complex system where hundreds of variables interact simultaneously. AI processes all this data within milliseconds and suggests the most optimal investment decision.</p>
+      <h2>How the Bilkan AI Finance Model Works</h2>
+      <h3>Layer 1 – Data Collection and Cleaning</h3>
+      <p>More than 10,000 data points are collected per second: stock prices, macroeconomic data, corporate news, and social media sentiment analysis.</p>
+      <h3>Layer 2 – Forecasting Models</h3>
+      <ul><li><strong>LSTM:</strong> Analyzes time series data.</li><li><strong>Transformer models:</strong> Classifies sentiment in news texts.</li><li><strong>Reinforcement learning:</strong> Learns to maximize profit in simulated environments.</li><li><strong>Ensemble learning:</strong> Combines the predictions of the three models to make the final decision.</li></ul>
+      <h3>Layer 3 – Risk Management</h3>
+      <p>Alongside each prediction, a confidence interval and expected volatility are calculated.</p>
+      <div class="post-stat-row"><div class="post-stat"><span class="stat-num">67%</span><span class="stat-label">Daily Trend Pred.</span></div><div class="post-stat"><span class="stat-num" style="color:var(--accent-cyan)">71%</span><span class="stat-label">Weekly Success</span></div><div class="post-stat"><span class="stat-num" style="color:var(--accent-green)">74%</span><span class="stat-label">Monthly Success</span></div></div>
+      <h2>Real-Life Usage Scenarios</h2>
+      <p><strong>Daily Trader:</strong> Mr. Ali devotes 1 hour a day to the stock market. The Bilkan AI mobile app sends at 09:30 AM: <em>"Buy signal for THYAO today. Target price: 315 TL, stop-loss: 298 TL."</em></p>
+      <p><strong>Portfolio Manager:</strong> When abnormal buy orders are detected in banking stocks, the AI updates the weight recommendation hourly.</p>
+      <div class="post-cta-box">
+        <h3>Bilkan AI Difference</h3>
+        <p>Our models are trained specifically for Turkish markets (BIST, VIOP, Foreign Exchange). We analyzed more than 50 million transaction data points from the past 10 years.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Contact Us →</a>
+      </div>
+    </div>
+
+    <!-- POST 4 TR -->
+    <div id="post-4-tr">
+      <div class="post-hero-img"><img src="blog_eticaret.png" alt="E-ticarette Yapay Zeka"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(215,100%,55%)">🛒 Ticaret / E-ticaret Odağı</span></div>
+      <h1>2026'da E-ticaret Siteleri İçin Müşteri Kaybını Önleyen Yapay Zeka Öneri Motoru Nasıl Geliştirilir?</h1>
+      <p>E-ticarette en büyük sorunlardan biri sepet terki ve müşteri kaybıdır. Yapay zeka öneri motorları, doğru ürünü, doğru anda, doğru fiyatla sunarak bu kaybı önler.</p>
+      <h2>Sepet Terkinin Nedenleri ve Yapay Zeka Çözümleri</h2>
+      <p><strong>Neden 1: Beklenmedik ek maliyetler</strong><br>Çözüm: Yapay zeka, daha ödeme ekranına gelmeden kargo ücretini tahmin eder ve kargo bedava kampanyalı tamamlayıcı ürün önerir.</p>
+      <p><strong>Neden 2: Kararsızlık</strong><br>Çözüm: Kullanıcının ürünü piyasa ortalamasının %10 üzerindeyse, sepette alternatif önerisi gösterir.</p>
+      <p><strong>Neden 3: Dikkat dağılması</strong><br>Çözüm: 10 dakikadan uzun süre bekleyen kullanıcıya "Sepetini kurtar, %5 indirim: SEPET5" gönderilir.</p>
+      <h2>Öneri Motorunun Teknik Mimarisi</h2>
+      <p><strong>İşbirlikçi filtreleme + İçerik tabanlı filtreleme:</strong> "Sizin gibi kullanıcılar bunu da aldı" ve "Bu ürünün rengini beğendiyseniz" önerilerini hibrit olarak sunar.</p>
+      <p><strong>Gerçek zamanlı A/B testi:</strong> Her kullanıcıya aynı anda 3 farklı öneri seti gönderilir, hangisinin dönüşüm oranı yüksekse o öğrenilir.</p>
+      <div class="post-stat-row"><div class="post-stat"><span class="stat-num">%68</span><span class="stat-label">Eski sepet terk oranı</span></div><div class="post-stat-arrow">→</div><div class="post-stat"><span class="stat-num" style="color:var(--accent-cyan)">%42</span><span class="stat-label">AI sonrası terk oranı</span></div></div>
+      <div class="post-cta-box">
+        <h3>Bilkanai Farkı</h3>
+        <p>Modelimiz Türk e-ticaret sitelerinin verileriyle eğitilmiştir. API'mizle 1 haftada öneri motorunuzu devreye alın. Performans garantisi: Sepet terk oranınızda 3 ay içinde en az %15 iyileşme.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Bize Ulaşın →</a>
+      </div>
+    </div>
+
+    <!-- POST 4 EN -->
+    <div id="post-4-en">
+      <div class="post-hero-img"><img src="blog_eticaret.png" alt="AI in E-commerce"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(215,100%,55%)">🛒 Commerce / E-commerce Focus</span></div>
+      <h1>How to Develop an AI Recommendation Engine that Prevents Customer Churn for E-commerce Sites in 2026?</h1>
+      <p>One of the biggest problems in e-commerce is cart abandonment and customer churn. AI recommendation engines prevent this loss by presenting the right product, at the right time, at the right price.</p>
+      <h2>Reasons for Cart Abandonment and AI Solutions</h2>
+      <p><strong>Reason 1: Unexpected extra costs</strong><br>Solution: AI predicts the shipping cost before reaching the payment screen and suggests a complementary product with a free shipping campaign.</p>
+      <p><strong>Reason 2: Indecision</strong><br>Solution: If the user's item is 10% above the market average, it displays alternative recommendations in the cart.</p>
+      <p><strong>Reason 3: Distraction</strong><br>Solution: A user waiting for more than 10 minutes is sent "Recover your cart, 5% discount: CART5".</p>
+      <h2>Technical Architecture of the Recommendation Engine</h2>
+      <p><strong>Collaborative filtering + Content-based filtering:</strong> Offers a hybrid recommendation set of "Users like you also bought this" and "If you liked the color of this product".</p>
+      <p><strong>Real-time A/B testing:</strong> 3 different recommendation sets are sent to each user simultaneously, learning which one has the highest conversion rate.</p>
+      <div class="post-stat-row"><div class="post-stat"><span class="stat-num">68%</span><span class="stat-label">Old Aban. Rate</span></div><div class="post-stat-arrow">→</div><div class="post-stat"><span class="stat-num" style="color:var(--accent-cyan)">42%</span><span class="stat-label">Rate Post-AI</span></div></div>
+      <div class="post-cta-box">
+        <h3>Bilkan AI Difference</h3>
+        <p>Our model is trained on Turkish e-commerce site data. Activate your recommendation engine in 1 week with our API. Performance guarantee: At least 15% improvement in your cart abandonment rate within 3 months.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Contact Us →</a>
+      </div>
+    </div>
+
+    <!-- POST 5 TR -->
+    <div id="post-5-tr">
+      <div class="post-hero-img"><img src="blog_maliyet.png" alt="Yapay Zeka Maliyeti ROI"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(30,100%,60%)">💰 Sektörel Verimlilik</span></div>
+      <h1>Eğitim, Sağlık ve Finans Sektörlerinde Yapay Zeka ile İş Süreçlerini Optimize Etmenin Maliyeti Nedir?</h1>
+      <p>Yapay zekaya yatırım yapmayı düşünen şirketlerin ilk sorusu genellikle "Ne kadara mal olur?" oluyor. Ancak doğru soru aslında "Yatırımın geri dönüşu kaç ayda olur?" dur.</p>
+      <h2>Maliyeti Belirleyen Faktörler</h2>
+      <ul><li><strong>Veri miktarı ve kalitesi:</strong> Ne kadar temiz veriniz varsa proje o kadar ucuz olur.</li><li><strong>Kullanım senaryosu sayısı:</strong> Tek bir problemi çözmek mi yoksa 10 farklı problemi mi?</li><li><strong>Gerçek zamanlılık ihtiyacı:</strong> 1 saniyede yanıt mı, günde bir kez rapor mu?</li><li><strong>Altyapı seçimi:</strong> Bulut mu, kendi sunucularınız mı, hibrit mi?</li></ul>
+      <h2>Sektörlere Göre Yaklaşık Maliyet Tablosu</h2>
+      <div class="post-table-wrap"><table class="post-table"><thead><tr><th>Sektör</th><th>Kullanım Senaryosu</th><th>Süre</th><th>Maliyet (TL)</th><th>GSS</th></tr></thead><tbody><tr><td>Eğitim</td><td>Kişiselleştirilmiş öğrenme</td><td>4–6 ay</td><td>400.000–800.000</td><td>12–18 ay</td></tr><tr><td>Eğitim</td><td>Sınav otomasyonu</td><td>2–3 ay</td><td>150.000–300.000</td><td>6–9 ay</td></tr><tr><td>Sağlık</td><td>Radyoloji görüntü analizi</td><td>6–8 ay</td><td>600.000–1.200.000</td><td>10–14 ay</td></tr><tr><td>Sağlık</td><td>Hasta triyaj asistanı</td><td>3–4 ay</td><td>250.000–500.000</td><td>8–12 ay</td></tr><tr><td>Finans</td><td>Borsa tahmin modeli</td><td>5–7 ay</td><td>500.000–1.000.000</td><td>6–10 ay</td></tr><tr><td>Finans</td><td>Kredi risk skorlama</td><td>3–4 ay</td><td>300.000–600.000</td><td>4–6 ay</td></tr></tbody></table></div>
+      <h2>Örnek Vaka: Özel Hastanede Radyoloji</h2>
+      <p>500 yataklı özel hastane için geliştirilen görüntü analiz modeli ile raporlama süresi 4 günden 22 saate düştü. Yıllık ek gelir 1.200.000 TL, geri ödeme süresi: <strong>8 ay.</strong></p>
+      <div class="post-cta-box">
+        <h3>Bilkanai Farkı</h3>
+        <p>Şeffaf fiyatlandırma, esnek ödeme (3–9 taksit) ve performans garantisi. Modeliniz çalışmazsa ücret iadesi.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Özel Teklif Al →</a>
+      </div>
+    </div>
+
+    <!-- POST 5 EN -->
+    <div id="post-5-en">
+      <div class="post-hero-img"><img src="blog_maliyet.png" alt="Cost of AI ROI"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(30,100%,60%)">💰 Sectoral Efficiency</span></div>
+      <h1>What is the Cost of Optimizing Business Processes with AI in Education, Healthcare, and Finance Sectors?</h1>
+      <p>The first question of companies considering investing in AI is usually "How much will it cost?" However, the right question is actually "In how many months will the return on investment (ROI) occur?"</p>
+      <h2>Factors Determining the Cost</h2>
+      <ul><li><strong>Data quantity and quality:</strong> The cleaner your data, the cheaper the project.</li><li><strong>Number of use cases:</strong> Solving a single problem vs. 10 different problems?</li><li><strong>Real-time response requirement:</strong> 1-second response vs. once-a-day report?</li><li><strong>Infrastructure choice:</strong> Cloud vs. on-premise vs. hybrid?</li></ul>
+      <h2>Approximate Cost Table by Sector</h2>
+      <div class="post-table-wrap"><table class="post-table"><thead><tr><th>Sector</th><th>Use Case</th><th>Duration</th><th>Cost (TL)</th><th>Payback</th></tr></thead><tbody><tr><td>Education</td><td>Personalized learning</td><td>4–6 months</td><td>400,000–800,000</td><td>12–18 months</td></tr><tr><td>Education</td><td>Exam automation</td><td>2–3 months</td><td>150,000–300,000</td><td>6–9 months</td></tr><tr><td>Healthcare</td><td>Radiology image analysis</td><td>6–8 months</td><td>600,000–1,200,000</td><td>10–14 months</td></tr><tr><td>Healthcare</td><td>Patient triage assistant</td><td>3–4 months</td><td>250,000–500,000</td><td>8–12 months</td></tr><tr><td>Finance</td><td>Stock market prediction model</td><td>5–7 months</td><td>500,000–1,000,000</td><td>6–10 months</td></tr><tr><td>Finance</td><td>Credit risk scoring</td><td>3–4 months</td><td>300,000–600,000</td><td>4–6 months</td></tr></tbody></table></div>
+      <h2>Case Study: Radiology in a Private Hospital</h2>
+      <p>With the image analysis model developed for a 500-bed private hospital, report preparation time fell from 4 days to 22 hours. Annual additional revenue 1,200,000 TL, payback period: <strong>8 months.</strong></p>
+      <div class="post-cta-box">
+        <h3>Bilkan AI Difference</h3>
+        <p>Transparent pricing, flexible payment (3–9 installments), and performance guarantee. Refund if your model does not work.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Get Special Offer →</a>
+      </div>
+    </div>
+
+    <!-- POST 6 TR -->
+    <div id="post-6-tr">
+      <div class="post-hero-img"><img src="blog_karar.png" alt="Karar Destek Sistemleri AI"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(300,90%,65%)">🧠 Karar Destek</span></div>
+      <h1>Finans ve Ticaret Yöneticileri İçin Veriye Dayalı Karar Alma Süreçlerini Destekleyen Yapay Zeka Araçları Hangileridir?</h1>
+      <p>Bir finans direktörü veya ticaret müdürü, her gün onlarca kritik karar vermek zorundadır. İşte tam bu noktada yapay zeka destekli karar destek sistemleri devreye girer.</p>
+      <h2>Bilkanai'nin Karar Destek Araçları</h2>
+      <h3>Araç 1: Talep Tahmin Asistanı</h3>
+      <p>Gelecek 1–6 ay boyunca, her ürün kategorisi için beklenen satış adedini mevsimsellik, kampanya takvimi, hava durumu ve rakip fiyatlarıyla birlikte tahmin eder.</p>
+      <p><em>"A sınıfı kahve makinesi Nisan 2026 tahmini: 8.750 adet. Mayıs'ta %15 indirim yaparsanız 11.200'e çıkar, ancak kâr marjı %8 düşer."</em></p>
+      <h3>Araç 2: Nakit Akışı Simülatörü</h3>
+      <p>Şirketin önümüzdeki 3 aydaki nakit giriş/çıkışlarını, müşteri ödeme gecikmelerini de hesaba katarak simüle eder ve somut çözüm önerileri sunar.</p>
+      <h3>Araç 3: Fiyat Optimizasyon Motoru</h3>
+      <p>Talep esnekliği, rakip fiyatları ve stok durumuna göre her ürün için optimum fiyat önerir. Birim kârı değil, net kârı maksimize eder.</p>
+      <h3>Araç 4: Müşteri Yaşam Boyu Değeri (CLV) Tahmini</h3>
+      <p>Her müşterinizin önümüzdeki 12 ay boyunca ne kadar kazandıracağını tahmin eder. Böylece sadece yüksek CLV'li müşterilere özel kampanyalar yapılır.</p>
+      <div class="post-cta-box">
+        <h3>Bilkanai Farkı</h3>
+        <p>Karar destek sistemlerimizi 1 ay boyunca kendi verilerinizle test edin, beğenmezseniz ücret ödemezsiniz. SAP, Logo, Microgram gibi sistemlerinizle entegre çalışır.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Bize Ulaşın →</a>
+      </div>
+    </div>
+
+    <!-- POST 6 EN -->
+    <div id="post-6-en">
+      <div class="post-hero-img"><img src="blog_karar.png" alt="Decision Support Systems AI"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(300,90%,65%)">🧠 Decision Support</span></div>
+      <h1>Which AI Tools Support Data-Driven Decision-Making Processes for Finance and Commerce Managers?</h1>
+      <p>A finance director or commerce manager has to make dozens of critical decisions every day. This is precisely where AI-powered decision support systems come into play.</p>
+      <h2>Bilkan AI Decision Support Tools</h2>
+      <h3>Tool 1: Demand Forecasting Assistant</h3>
+      <p>Forecasts the expected sales volume for each product category over the next 1–6 months, along with seasonality, campaign schedule, weather, and competitor prices.</p>
+      <p><em>"Class A coffee maker April 2026 forecast: 8,750 units. If you apply a 15% discount in May, it rises to 11,200, but the profit margin drops by 8%."</em></p>
+      <h3>Tool 2: Cash Flow Simulator</h3>
+      <p>Simulates the company's cash inflows/outflows over the next 3 months, taking into account customer payment delays, and offers concrete solutions.</p>
+      <h3>Tool 3: Price Optimization Engine</h3>
+      <p>Suggests the optimum price for each product based on demand elasticity, competitor prices, and stock status. It maximizes net profit, not unit profit.</p>
+      <h3>Tool 4: Customer Lifetime Value (CLV) Prediction</h3>
+      <p>Predicts how much each of your customers will generate over the next 12 months. Thus, special campaigns are made only for high-CLV customers.</p>
+      <div class="post-cta-box">
+        <h3>Bilkan AI Difference</h3>
+        <p>Test our decision support systems with your own data for 1 month; if you don't like it, you don't pay. Works integrated with systems like SAP, Logo, Microgram.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Contact Us →</a>
+      </div>
+    </div>
+
+    <!-- POST 7 TR -->
+    <div id="post-7-tr">
+      <div class="post-hero-img"><img src="blog_ozel.png" alt="Özel Yapay Zeka Geliştirme"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(200,100%,55%)">⚙️ Özel Geliştirme</span></div>
+      <h1>Hazır Yazılımların Yetmediği Durumlar İçin Özel Yapay Zeka Uygulaması Geliştirmek Ne Kadar Sürer?</h1>
+      <p>Piyasada hazır yapay zeka araçları var ama her işletmenin ihtiyacı benzersizdir. Kalan %20'lik özgün ihtiyacınız için tam size özel bir yapay zeka uygulaması geliştirmeniz gerekebilir.</p>
+      <h2>Bilkanai Metodolojisi – 5 Aşama</h2>
+      <p><strong>Aşama 1: Keşif ve Fizibilite (2–4 hafta)</strong> – İhtiyaç analizi, veri kalitesi incelemesi, teknik teklif.</p>
+      <p><strong>Aşama 2: Prototip / MVP (4–8 hafta)</strong> – En kritik 1 özelliği çalışan "proof of concept" model.</p>
+      <p><strong>Aşama 3: Tam Sürüm (8–16 hafta)</strong> – Tüm özellikler, güvenlik, ölçeklenebilirlik, kullanıcı arayüzü.</p>
+      <p><strong>Aşama 4: Test ve Kabul (2–4 hafta)</strong> – Ekibinizin sistemi kullanması, hata raporlaması, düzeltmeler.</p>
+      <p><strong>Aşama 5: Canlıya Alma (1–2 hafta)</strong> – Kurulum, personel eğitimi, dokümantasyon teslimi.</p>
+      <p><strong>Toplam: Ortalama 12–20 hafta (3–5 ay)</strong></p>
+      <h2>Gerçek Proje Örnekleri</h2>
+      <p><strong>Otomotiv yan sanayi – Kalite kontrol:</strong> 14 haftada metal parçalardaki çatlakları %96 doğrulukla tespit. Geri ödeme: 5 ay.</p>
+      <p><strong>Perakende zinciri – Raf düzeni:</strong> 18 haftada raf optimizasyonu, satışlar %12 arttı. Geri ödeme: 7 ay.</p>
+      <p><strong>Banka – Kredi başvurusu:</strong> 22 haftada inceleme süresi 25 dakikadan 2 dakikaya düştü. Geri ödeme: 3 ay.</p>
+      <div class="post-cta-box">
+        <h3>Bilkanai Farkı</h3>
+        <p>Agile yaklaşım: 2 haftada bir çalışan ara versiyon gösteririz. Sabit fiyat + zaman garantisi: süreyi aşarsak ekstra gün ücreti almayız.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Görüşme Talep Et →</a>
+      </div>
+    </div>
+
+    <!-- POST 7 EN -->
+    <div id="post-7-en">
+      <div class="post-hero-img"><img src="blog_ozel.png" alt="Custom AI Development"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(200,100%,55%)">⚙️ Custom Development</span></div>
+      <h1>How Long Does It Take to Develop a Custom AI Application When Ready-Made Software is Not Enough?</h1>
+      <p>There are ready-made AI tools on the market, but every business's needs are unique. For the remaining 20% of your specific needs, you may need to develop a custom AI application tailored just for you.</p>
+      <h2>Bilkan AI Methodology – 5 Phases</h2>
+      <p><strong>Phase 1: Discovery & Feasibility (2–4 weeks)</strong> – Needs analysis, data quality review, technical proposal.</p>
+      <p><strong>Phase 2: Prototype / MVP (4–8 weeks)</strong> – A "proof of concept" model running the single most critical feature.</p>
+      <p><strong>Phase 3: Full Version (8–16 weeks)</strong> – All features, security, scalability, user interface.</p>
+      <p><strong>Phase 4: Testing & Acceptance (2–4 weeks)</strong> – Your team testing the system, bug reporting, corrections.</p>
+      <p><strong>Phase 5: Launch (1–2 weeks)</strong> – Installation, staff training, handover of documentation.</p>
+      <p><strong>Total: Average 12–20 weeks (3–5 months)</strong></p>
+      <h2>Real Project Examples</h2>
+      <p><strong>Automotive sub-industry – Quality control:</strong> Detected cracks in metal parts with 96% accuracy in 14 weeks. Payback: 5 months.</p>
+      <p><strong>Retail chain – Shelf layout:</strong> Shelf optimization in 18 weeks, sales increased by 12%. Payback: 7 months.</p>
+      <p><strong>Bank – Credit application:</strong> Review time fell from 25 minutes to 2 minutes in 22 weeks. Payback: 3 months.</p>
+      <div class="post-cta-box">
+        <h3>Bilkan AI Difference</h3>
+        <p>Agile approach: We show working intermediate versions every 2 weeks. Fixed price + time guarantee: we do not charge extra daily fees if we exceed the duration.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Request Consultation →</a>
+      </div>
+    </div>
+
+    <!-- POST 8 TR -->
+    <div id="post-8-tr">
+      <div class="post-hero-img"><img src="blog_kobi.png" alt="KOBİ Yapay Zeka Yatırımı"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(160,100%,45%)">🚀 KOBİ & Yatırım</span></div>
+      <h1>2026 Trendleri: Türkiye'de KOBİ'lerin Yapay Zeka Yatırımından Gerçekçi Getiri Beklentileri Neler Olmalı?</h1>
+      <p>Türkiye'deki KOBİ'ler yapay zekaya yatırım yapmak istiyor ancak çoğu zaman gerçekçi olmayan beklentilerle yola çıkıyor. Bu yazıda, 2026 yılında KOBİ'lerin yapay zekadan ne bekleyebileceğini veriyle anlatıyoruz.</p>
+      <h2>KOBİ'ler için Yapay Zeka Yatırımının 4 Temel Kuralı</h2>
+      <p><strong>Kural 1:</strong> Yapay zeka bir "sihirli değnek" değil, bir "hesap makinesi"dir. Gerçekçi beklenti: %15–25 verimlilik artışı.</p>
+      <p><strong>Kural 2:</strong> Önce verinizi düzene sokun. Proje süresinin %30–40'ı veri temizliğine gidecek.</p>
+      <p><strong>Kural 3:</strong> İnsan + yapay zeka = en iyi sonuç. Çalışan sayınız azalmaz, her çalışanın üretkenliği artar.</p>
+      <p><strong>Kural 4:</strong> En hızlı getiri müşteriyle ilgili alanlarda olur (3–6 ay).</p>
+      <h2>Sektörlere Göre 2026 Getiri Beklentileri</h2>
+      <div class="post-stat-row" style="flex-wrap:wrap; gap:1rem;">
+        <div class="post-stat"><span class="stat-num">12–18 ay</span><span class="stat-label">Eğitim GSS</span></div>
+        <div class="post-stat"><span class="stat-num" style="color:var(--accent-cyan)">6–10 ay</span><span class="stat-label">Sağlık GSS</span></div>
+        <div class="post-stat"><span class="stat-num" style="color:var(--accent-green)">8–12 ay</span><span class="stat-label">Finans GSS</span></div>
+        <div class="post-stat"><span class="stat-num" style="color:hsl(30,100%,60%)">5–9 ay</span><span class="stat-label">Ticaret GSS</span></div>
+      </div>
+      <h2>Bilkanai'nin KOBİ'lere Özel Paketleri</h2>
+      <p><strong>Paket 1: Keşif Paketi</strong> – 9.900 TL. 2 haftalık keşif, özel fırsat raporu, önceliklendirme matrisi.</p>
+      <p><strong>Paket 2: Başlangıç (MVP)</strong> – 45.000 TL'den. Tek iş süreci, 6 haftada teslim, ilk yıl bakım dahil.</p>
+      <p><strong>Paket 3: Kurumsal</strong> – Özel teklif. Birden fazla süreç, 3–5 ay, 3 yıl destek dahil.</p>
+      <div class="post-cta-box">
+        <h3>24 Ay Geri Ödeme Garantisi</h3>
+        <p>Hiçbir KOBİ müşterimiz yaptığı yatırımı 24 aydan daha uzun sürede geri ödemedi. Siz de geri ödemezseniz, farkı biz tazmin ederiz.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Ücretsiz Ön Görüşme →</a>
+      </div>
+    </div>
+
+    <!-- POST 8 EN -->
+    <div id="post-8-en">
+      <div class="post-hero-img"><img src="blog_kobi.png" alt="SMB AI Investment"></div>
+      <div class="post-meta"><span class="post-category-badge" style="--c:hsl(160,100%,45%)">🚀 SMB & Investment</span></div>
+      <h1>2026 Trends: What Should Be Realistic Return Expectations from AI Investment for SMBs in Turkey?</h1>
+      <p>SMBs in Turkey want to invest in AI, but they often set out with unrealistic expectations. In this article, we explain with data what SMBs can expect from AI in 2026.</p>
+      <h2>4 Core Rules of AI Investment for SMBs</h2>
+      <p><strong>Rule 1:</strong> AI is not a "magic wand," it is a "calculator." Realistic expectation: 15–25% efficiency increase.</p>
+      <p><strong>Rule 2:</strong> Get your data in order first. 30–40% of the project duration will be spent on data cleaning.</p>
+      <p><strong>Rule 3:</strong> Human + AI = best result. Your headcount will not drop, but the productivity of each employee will increase.</p>
+      <p><strong>Rule 4:</strong> The fastest return occurs in customer-related areas (3–6 months).</p>
+      <h2>2026 Return Expectations by Sector</h2>
+      <div class="post-stat-row" style="flex-wrap:wrap; gap:1rem;">
+        <div class="post-stat"><span class="stat-num">12–18 mos</span><span class="stat-label">Education ROI</span></div>
+        <div class="post-stat"><span class="stat-num" style="color:var(--accent-cyan)">6–10 mos</span><span class="stat-label">Healthcare ROI</span></div>
+        <div class="post-stat"><span class="stat-num" style="color:var(--accent-green)">8–12 mos</span><span class="stat-label">Finance ROI</span></div>
+        <div class="post-stat"><span class="stat-num" style="color:hsl(30,100%,60%)">5–9 mos</span><span class="stat-label">Commerce ROI</span></div>
+      </div>
+      <h2>Bilkan AI's Special Packages for SMBs</h2>
+      <h3>Package 1: Discovery Package</h3>
+      <p>9,900 TL. 2-week discovery, custom opportunities report, prioritization matrix.</p>
+      <h3>Package 2: Starter (MVP)</h3>
+      <p>Starting from 45,000 TL. Single business process, delivered in 6 weeks, first year maintenance included.</p>
+      <h3>Package 3: Enterprise</h3>
+      <p>Custom quote. Multiple processes, 3–5 months, 3 years support included.</p>
+      <div class="post-cta-box">
+        <h3>24-Month Payback Guarantee</h3>
+        <p>None of our SMB clients had a payback period longer than 24 months. If your investment does not pay back in 24 months, we will compensate the difference.</p>
+        <a href="index.html#iletisim" class="btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;">Free Consultation →</a>
+      </div>
+    </div>
+
+  </div><!-- end hidden templates -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <a href="index.html" class="logo footer-logo">
+        <div class="logo-dot"></div>
+        BILKAN<span>AI</span>
+      </a>
+      <div class="footer-copy" data-tr="© 2026 Bilkan AI. Tüm Hakları Saklıdır." data-en="© 2026 Bilkan AI. All Rights Reserved.">© 2026 Bilkan AI. Tüm Hakları Saklıdır.</div>
+      <div class="footer-links">
+        <a href="index.html" data-tr="Anasayfa" data-en="Home">Anasayfa</a>
+        <a href="index.html#hizmetler" data-tr="Hizmetler" data-en="Services">Hizmetler</a>
+        <a href="index.html#sektorler" data-tr="Sektörler" data-en="Sectors">Sektörler</a>
+        <a href="index.html#hakkimizda" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a>
+        <a href="index.html#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // 3D card tilt effect
+    document.querySelectorAll('.blog-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = e.clientX - r.left;
+        const y = e.clientY - r.top;
+        const cx = r.width / 2, cy = r.height / 2;
+        const rotX = ((y - cy) / cy) * -10;
+        const rotY = ((x - cx) / cx) * 10;
+        card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-8px)`;
+        card.style.setProperty('--mouse-x', `${(x / r.width) * 100}%`);
+        card.style.setProperty('--mouse-y', `${(y / r.height) * 100}%`);
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+      });
+    });
+
+    // Modal open/close (Language-aware)
+    function openPost(id) {
+      const currentLang = localStorage.getItem('lang') || 'tr';
+      const langId = `${id}-${currentLang}`;
+      const template = document.getElementById(langId) || document.getElementById(id);
+      if (!template) return;
+      
+      const content = template.innerHTML;
+      document.getElementById('post-modal-inner').innerHTML = content;
+      const overlay = document.getElementById('post-overlay');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('post-modal').scrollTop = 0;
+    }
+    
+    function closePost(e, force) {
+      if (force || (e && e.target === document.getElementById('post-overlay'))) {
+        document.getElementById('post-overlay').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closePost(null, true);
+    });
+  </script>
+</body>
+</html>

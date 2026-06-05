@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-tr="Bilkan AI - Yapay Zeka Uygulamaları Geliştiriyoruz" data-en="Bilkan AI - Developing Artificial Intelligence Applications">Bilkan AI - Yapay Zeka Uygulamaları Geliştiriyoruz</title>
+  <meta name="description" content="Bilkanai, eğitim, sağlık, finans ve ticaret alanlarında yapay zeka uygulamaları geliştiren Ankara merkezli bir yazılım şirketidir." data-tr-content="Bilkanai, eğitim, sağlık, finans ve ticaret alanlarında yapay zeka uygulamaları geliştiren Ankara merkezli bir yazılım şirketidir." data-en-content="Bilkan AI is an Ankara-based software company that develops artificial intelligence applications in education, healthcare, finance, and commerce.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Interactive Neural Canvas Background -->
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- Glowing background blobs -->
+  <div class="glow-orb orb-purple"></div>
+  <div class="glow-orb orb-blue"></div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <img src="bilkan ai_logo.png" alt="Bilkan AI Logo" class="logo-img">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#hizmetler" data-tr="Hizmetler" data-en="Services">Hizmetler</a></li>
+          <li><a href="#sektorler" data-tr="Sektörler" data-en="Sectors">Sektörler</a></li>
+          <li><a href="#hakkimizda" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
+          <li><a href="blog.html" data-tr="Blog" data-en="Blog">Blog</a></li>
+          <li><a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="lang-switch" class="lang-btn" aria-label="Language Switcher">EN</button>
+        <a href="#iletisim" class="cta-btn" data-tr="Bize Ulaşın" data-en="Contact Us">Bize Ulaşın</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tagline" id="hero-tagline-container" style="opacity: 0; transition: opacity 0.5s ease;">
+          <div class="pulse"></div>
+          <span id="hero-tagline-text" data-tr="Yapay Zeka Yazılım Teknolojileri" data-en="AI Software Technologies"></span>
+        </div>
+        <h1 class="hero-title" id="hero-title-text" data-tr="Yapay Zeka ile Geleceği Şekillendirin" data-en="Shape the Future with AI"></h1>
+        <p class="hero-desc" id="hero-desc-text" data-tr="Eğitim, sağlık, finans ve ticaret sektörleri için veri odaklı akıllı modeller ve yenilikçi iş uygulamaları geliştiriyoruz." data-en="We develop data-driven intelligent models and innovative business applications for education, healthcare, finance, and commerce sectors."></p>
+        <div class="hero-actions" id="hero-actions-container" style="opacity: 0; transform: translateY(10px); transition: opacity 0.8s ease, transform 0.8s ease;">
+          <a href="#hizmetler" class="btn-primary">
+            <span data-tr="Çözümlerimizi Keşfet" data-en="Explore Our Solutions">Çözümlerimizi Keşfet</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#hakkimizda" class="btn-secondary" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a>
+        </div>
+      </div>
+
+      <!-- Simulated LLM Writing Mockup -->
+      <div class="llm-mockup">
+        <div class="llm-header">
+          <div class="llm-dots">
+            <div class="llm-dot dot-r"></div>
+            <div class="llm-dot dot-y"></div>
+            <div class="llm-dot dot-g"></div>
+          </div>
+          <div class="llm-status">
+            <div class="llm-pulse"></div>
+            <span data-tr="Çevrimiçi" data-en="Online">Çevrimiçi</span>
+          </div>
+        </div>
+        <div class="llm-body">
+          <!-- Chat bubbles will be generated dynamically by JS typewriter simulation -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid Section -->
+  <section id="hizmetler">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-tr="Hizmetlerimiz" data-en="Our Services">Hizmetlerimiz</span>
+        <h2 class="section-title" data-tr="Yapay Zeka & Yazılım Hizmetleri" data-en="AI & Software Services">Yapay Zeka & Yazılım Hizmetleri</h2>
+        <p class="section-desc" data-tr="Yaratıcı generatif medyadan üç boyutlu tasarıma, modern bulut servislerinden dönüşüm odaklı pazarlama altyapılarına kadar yenilikçi dijital hizmetler sunuyoruz." data-en="We offer innovative digital services ranging from creative generative media to 3D design, modern cloud services, and conversion-focused marketing infrastructure.">
+          Yaratıcı generatif medyadan üç boyutlu tasarıma, modern bulut servislerinden dönüşüm odaklı pazarlama altyapılarına kadar yenilikçi dijital hizmetler sunuyoruz.
+        </p>
+      </div>
+
+      <div class="sectors-grid" style="margin-bottom: 5rem;">
+        <!-- Card 1: Generative Video -->
+        <div class="sector-card">
+          <div class="card-content">
+            <span class="card-tag" data-tr="Üretken Medya" data-en="Generative Media">Üretken Medya</span>
+            <h3 class="card-title" data-tr="Generatif Video Üretimi" data-en="Generative Video Creation">Generatif Video Üretimi</h3>
+            <p class="card-desc" data-tr="Gelişmiş difüzyon ve üretken video modelleri ile metinden yüksek çözünürlüklü videolara, animasyonlara ve kişiselleştirilmiş video içeriklerine giden süreçleri yönetiyoruz." data-en="We manage the processes from text to high-resolution videos, animations, and personalized video content with advanced diffusion and generative video models.">
+              Gelişmiş difüzyon ve üretken video modelleri ile metinden yüksek çözünürlüklü videolara, animasyonlara ve kişiselleştirilmiş video içeriklerine giden süreçleri yönetiyoruz.
+            </p>
+          </div>
+          <div class="card-visual-wrapper">
+            <svg class="card-visual-art" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-video" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="hsl(270, 95%, 65%)" />
+                  <stop offset="100%" stop-color="hsl(300, 90%, 65%)" />
+                </linearGradient>
+                <filter id="glow-video" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <circle cx="100" cy="100" r="50" stroke="url(#grad-video)" stroke-width="1.5" stroke-dasharray="8 6" />
+              <path d="M50 100 Q75 60, 100 100 T150 100" fill="none" stroke="url(#grad-video)" stroke-width="2" stroke-dasharray="3 3" />
+              <path d="M50 100 Q75 140, 100 100 T150 100" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.5" />
+              <polygon points="90,80 120,100 90,120" fill="none" stroke="url(#grad-video)" stroke-width="3" filter="url(#glow-video)" />
+              <circle cx="100" cy="100" r="30" stroke="url(#grad-video)" stroke-width="2" />
+              <circle cx="140" cy="70" r="3" fill="hsl(300, 90%, 65%)" />
+              <circle cx="60" cy="130" r="3" fill="hsl(270, 95%, 65%)" />
+              <circle cx="80" cy="65" r="2.5" fill="white" />
+              <circle cx="120" cy="135" r="2.5" fill="white" />
+            </svg>
+          </div>
+          <div class="card-icon-overlay">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          </div>
+        </div>
+
+        <!-- Card 2: 3D Modeling & Animation -->
+        <div class="sector-card">
+          <div class="card-content">
+            <span class="card-tag" data-tr="Üç Boyutlu Tasarım" data-en="3D Design">Üç Boyutlu Tasarım</span>
+            <h3 class="card-title" data-tr="3D Modelleme & Animasyon" data-en="3D Modeling & Animation">3D Modelleme & Animasyon</h3>
+            <p class="card-desc" data-tr="Sanal dünyalar, oyun motorları ve endüstriyel tasarımlar için yapay zeka destekli yüksek kaliteli 3D modeller, dokulandırma ve akıcı animasyonlar hazırlıyoruz." data-en="We prepare high-quality 3D assets, fluid animations, and texturing for virtual worlds, game engines, and industrial designs using AI-supported modeling tools.">
+              Sanal dünyalar, oyun motorları ve endüstriyel tasarımlar için yapay zeka destekli yüksek kaliteli 3D modeller, dokulandırma ve akıcı animasyonlar hazırlıyoruz.
+            </p>
+          </div>
+          <div class="card-visual-wrapper">
+            <svg class="card-visual-art" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-3d" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="hsl(185, 100%, 50%)" />
+                  <stop offset="100%" stop-color="hsl(215, 100%, 55%)" />
+                </linearGradient>
+                <filter id="glow-3d" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <path d="M100 45 L150 70 L150 130 L100 155 L50 130 L50 70 Z" fill="none" stroke="url(#grad-3d)" stroke-width="2" filter="url(#glow-3d)" />
+              <path d="M100 45 L100 155" stroke="url(#grad-3d)" stroke-width="1.5" />
+              <path d="M50 70 L150 130" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+              <path d="M150 70 L50 130" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+              <ellipse cx="100" cy="100" rx="65" ry="25" stroke="url(#grad-3d)" stroke-width="1" stroke-dasharray="5 5" transform="rotate(-15, 100, 100)" />
+              <circle cx="100" cy="45" r="4.5" fill="white" />
+              <circle cx="150" cy="70" r="4" fill="hsl(185, 100%, 50%)" />
+              <circle cx="150" cy="130" r="4.5" fill="white" />
+              <circle cx="100" cy="155" r="4" fill="hsl(215, 100%, 55%)" />
+              <circle cx="50" cy="130" r="4.5" fill="white" />
+              <circle cx="50" cy="70" r="4" fill="hsl(185, 100%, 50%)" />
+              <circle cx="100" cy="100" r="6" fill="hsl(185, 100%, 50%)" filter="url(#glow-3d)" />
+            </svg>
+          </div>
+          <div class="card-icon-overlay">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
+        </div>
+
+        <!-- Card 3: Web Services -->
+        <div class="sector-card">
+          <div class="card-content">
+            <span class="card-tag" data-tr="Dijital Altyapı" data-en="Digital Infrastructure">Dijital Altyapı</span>
+            <h3 class="card-title" data-tr="Web Servisleri & Geliştirme" data-en="Web Services & Development">Web Servisleri & Geliştirme</h3>
+            <p class="card-desc" data-tr="Ölçeklenebilir API entegrasyonları, yüksek performanslı web uygulamaları ve akıllı mikro servis mimarileri ile dijital platformlarınızı güçlendiriyoruz." data-en="We power your digital platforms from end to end by designing scalable API integrations, high-performance web applications, and smart microservice architectures.">
+              Ölçeklenebilir API entegrasyonları, yüksek performanslı web uygulamaları ve akıllı mikro servis mimarileri ile dijital platformlarınızı güçlendiriyoruz.
+            </p>
+          </div>
+          <div class="card-visual-wrapper">
+            <svg class="card-visual-art" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-web" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="hsl(145, 100%, 50%)" />
+                  <stop offset="100%" stop-color="hsl(185, 100%, 50%)" />
+                </linearGradient>
+                <filter id="glow-web" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <rect x="55" y="55" width="90" height="25" rx="4" fill="rgba(255, 255, 255, 0.03)" stroke="url(#grad-web)" stroke-width="1.5" />
+              <rect x="55" y="90" width="90" height="25" rx="4" fill="rgba(255, 255, 255, 0.03)" stroke="url(#grad-web)" stroke-width="1.5" filter="url(#glow-web)" />
+              <rect x="55" y="125" width="90" height="25" rx="4" fill="rgba(255, 255, 255, 0.03)" stroke="url(#grad-web)" stroke-width="1.5" />
+              <circle cx="70" cy="67.5" r="3" fill="hsl(145, 100%, 50%)" />
+              <circle cx="80" cy="67.5" r="3" fill="white" opacity="0.3" />
+              <circle cx="70" cy="102.5" r="3" fill="hsl(185, 100%, 50%)" />
+              <circle cx="80" cy="102.5" r="3" fill="hsl(145, 100%, 50%)" />
+              <circle cx="70" cy="137.5" r="3" fill="hsl(145, 100%, 50%)" />
+              <circle cx="80" cy="137.5" r="3" fill="white" opacity="0.3" />
+              <path d="M110 67.5 L130 67.5" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round" />
+              <path d="M110 102.5 L135 102.5" stroke="url(#grad-web)" stroke-width="2" stroke-linecap="round" />
+              <path d="M110 137.5 L125 137.5" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round" />
+              <path d="M40 100 L55 100" stroke="url(#grad-web)" stroke-width="1.5" />
+              <path d="M145 100 L160 100" stroke="url(#grad-web)" stroke-width="1.5" />
+              <circle cx="40" cy="100" r="4.5" fill="white" />
+              <circle cx="160" cy="100" r="4.5" fill="white" />
+            </svg>
+          </div>
+          <div class="card-icon-overlay">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+        </div>
+
+        <!-- Card 4: SEO & Ad Management -->
+        <div class="sector-card">
+          <div class="card-content">
+            <span class="card-tag" data-tr="Akıllı Pazarlama" data-en="Smart Marketing">Akıllı Pazarlama</span>
+            <h3 class="card-title" data-tr="SEO & Reklam Yönetimi" data-en="SEO & Ad Management">SEO & Reklam Yönetimi</h3>
+            <p class="card-desc" data-tr="Yapay zeka destekli anahtar kelime analizi, akıllı bütçe optimizasyonu ve dönüşüm odaklı reklam kampanyaları ile dijital görünürlüğünüzü zirveye taşıyoruz." data-en="We take you to the top of search engines with AI-supported keyword analysis, smart budget optimization, and conversion-oriented ad campaigns.">
+              Yapay zeka destekli anahtar kelime analizi, akıllı bütçe optimizasyonu ve dönüşüm odaklı reklam kampanyaları ile dijital görünürlüğünüzü zirveye taşıyoruz.
+            </p>
+          </div>
+          <div class="card-visual-wrapper">
+            <svg class="card-visual-art" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-seo" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="hsl(215, 100%, 55%)" />
+                  <stop offset="100%" stop-color="hsl(270, 95%, 65%)" />
+                </linearGradient>
+                <filter id="glow-seo" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <circle cx="100" cy="100" r="50" stroke="rgba(255, 255, 255, 0.08)" stroke-width="2" />
+              <circle cx="100" cy="100" r="35" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+              <circle cx="100" cy="100" r="20" stroke="url(#grad-seo)" stroke-width="2" filter="url(#glow-seo)" />
+              <path d="M50 140 L85 110 L105 125 L150 70" fill="none" stroke="url(#grad-seo)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-seo)" />
+              <path d="M135 70 L150 70 L150 85" fill="none" stroke="url(#grad-seo)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="150" cy="70" r="4" fill="white" />
+              <circle cx="85" cy="110" r="3" fill="hsl(215, 100%, 55%)" />
+              <circle cx="105" cy="125" r="3" fill="hsl(270, 95%, 65%)" />
+            </svg>
+          </div>
+          <div class="card-icon-overlay">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sector Grid Section -->
+  <section id="sektorler" style="border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-tr="Sektörlerimiz" data-en="Our Sectors">Sektörlerimiz</span>
+        <h2 class="section-title" data-tr="Sektör Odaklı AI Çözümleri" data-en="Sector-Focused AI Solutions">Sektör Odaklı AI Çözümleri</h2>
+        <p class="section-desc" data-tr="En son derin öğrenme ve veri analitiği metotlarını, işinizi ölçeklendirecek özelleştirilmiş platformlara dönüştürüyoruz." data-en="We transform the latest deep learning and data analytics methods into customized platforms to scale your business.">
+          En son derin öğrenme ve veri analitiği metotlarını, işinizi ölçeklendirecek özelleştirilmiş platformlara dönüştürüyoruz.
+        </p>
+      </div>
+
+      <div class="sectors-grid">
+        <!-- Card 1: Education -->
+        <div class="sector-card">
+          <div class="card-content">
+            <span class="card-tag" data-tr="Akıllı Öğrenim" data-en="Smart Learning">Akıllı Öğrenim</span>
+            <h3 class="card-title" data-tr="Eğitim Uygulamaları" data-en="Educational Applications">Eğitim Uygulamaları</h3>
+            <p class="card-desc" data-tr="Yapay zeka destekli eğitim çözümleriyle öğrenim süreçlerini kişiselleştiriyor, öğrencilerin bilgi seviyelerine özel müfredat yolları çiziyoruz." data-en="We personalize learning processes with AI-powered educational solutions, mapping custom curriculum paths tailored to students' knowledge levels.">
+              Yapay zeka destekli eğitim çözümleriyle öğrenim süreçlerini kişiselleştiriyor, öğrencilerin bilgi seviyelerine özel müfredat yolları çiziyoruz.
+            </p>
+          </div>
+          <div class="card-visual-wrapper">
+            <!-- Inline SVG for Premium vector design that rotates in 3D parallax -->
+            <svg class="card-visual-art" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-edu" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="hsl(270, 95%, 65%)" />
+                  <stop offset="100%" stop-color="hsl(215, 100%, 55%)" />
+                </linearGradient>
+                <filter id="glow-edu" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <!-- Glowing brain elements -->
+              <circle cx="100" cy="100" r="45" stroke="url(#grad-edu)" stroke-width="2" stroke-dasharray="4 6" />
+              <path d="M75 90 C75 75, 90 70, 100 85 C110 70, 125 75, 125 90 C125 110, 105 125, 100 130 C95 125, 75 110, 75 90 Z" fill="none" stroke="url(#grad-edu)" stroke-width="3" filter="url(#glow-edu)" />
+              <circle cx="100" cy="85" r="5" fill="hsl(185, 100%, 50%)" />
+              <line x1="100" y1="85" x2="100" y2="128" stroke="url(#grad-edu)" stroke-width="1.5" />
+              <circle cx="125" cy="90" r="4" fill="hsl(270, 95%, 65%)" />
+              <circle cx="75" cy="90" r="4" fill="hsl(215, 100%, 55%)" />
+              <!-- Neural Connections -->
+              <path d="M100 85 L140 70" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+              <circle cx="140" cy="70" r="3" fill="white" />
+              <path d="M100 110 L150 115" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+              <circle cx="150" cy="115" r="3" fill="white" />
+              <path d="M100 100 L60 110" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+              <circle cx="60" cy="110" r="3" fill="white" />
+            </svg>
+          </div>
+          <div class="card-icon-overlay">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          </div>
+        </div>
+
+        <!-- Card 2: Healthcare -->
+        <div class="sector-card">
+          <div class="card-content">
+            <span class="card-tag" data-tr="Medikal Bilişim" data-en="Medical Informatics">Medikal Bilişim</span>
+            <h3 class="card-title" data-tr="Sağlık Teknolojileri" data-en="Healthcare Technologies">Sağlık Teknolojileri</h3>
+            <p class="card-desc" data-tr="Hastalık erken teşhisi, MR/BT gibi tıbbi görüntü işlemeleri ve veri analitiği ile hekimlerin klinik teşhis doğruluğunu yükseltiyoruz." data-en="We increase the clinical diagnostic accuracy of physicians through early disease diagnosis, medical image processing (MRI/CT), and data analytics.">
+              Hastalık erken teşhisi, MR/BT gibi tıbbi görüntü işlemeleri ve veri analitiği ile hekimlerin klinik teşhis doğruluğunu yükseltiyoruz.
+            </p>
+          </div>
+          <div class="card-visual-wrapper">
+            <svg class="card-visual-art" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-health" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="hsl(185, 100%, 50%)" />
+                  <stop offset="100%" stop-color="hsl(215, 100%, 55%)" />
+                </linearGradient>
+                <filter id="glow-health" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <!-- DNA Spiral/Pulse visual -->
+              <path d="M40 100 Q70 60, 100 100 T160 100" fill="none" stroke="url(#grad-health)" stroke-width="3" filter="url(#glow-health)" />
+              <path d="M40 100 Q70 140, 100 100 T160 100" fill="none" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.5" />
+              <!-- DNA links -->
+              <line x1="70" y1="80" x2="70" y2="120" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+              <circle cx="70" cy="80" r="3" fill="hsl(185, 100%, 50%)" />
+              <circle cx="70" cy="120" r="3" fill="white" />
+              
+              <line x1="100" y1="100" x2="100" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+              
+              <line x1="130" y1="80" x2="130" y2="120" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+              <circle cx="130" cy="80" r="3" fill="white" />
+              <circle cx="130" cy="120" r="3" fill="hsl(215, 100%, 55%)" />
+            </svg>
+          </div>
+          <div class="card-icon-overlay">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          </div>
+        </div>
+
+        <!-- Card 3: Finance -->
+        <div class="sector-card">
+          <div class="card-content">
+            <span class="card-tag" data-tr="Kestirimci Analiz" data-en="Predictive Analysis">Kestirimci Analiz</span>
+            <h3 class="card-title" data-tr="Finans Uygulamaları" data-en="Financial Applications">Finans Uygulamaları</h3>
+            <p class="card-desc" data-tr="Borsa fiyat trend analizleri, piyasa duyarlılık tespiti ve gelişmiş portföy risk optimizasyon modelleri ile finansal kararları destekliyoruz." data-en="We support financial decisions with stock price trend analysis, market sentiment detection, and advanced portfolio risk optimization models.">
+              Borsa fiyat trend analizleri, piyasa duyarlılık tespiti ve gelişmiş portföy risk optimizasyon modelleri ile finansal kararları destekliyoruz.
+            </p>
+          </div>
+          <div class="card-visual-wrapper">
+            <svg class="card-visual-art" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-fin" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="hsl(145, 100%, 50%)" />
+                  <stop offset="100%" stop-color="hsl(185, 100%, 50%)" />
+                </linearGradient>
+                <filter id="glow-fin" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <!-- Grid Bars -->
+              <rect x="50" y="110" width="14" height="40" rx="3" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255,255,255,0.1)" />
+              <rect x="75" y="90" width="14" height="60" rx="3" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255,255,255,0.1)" />
+              <rect x="100" y="70" width="14" height="80" rx="3" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255,255,255,0.1)" />
+              <rect x="125" y="55" width="14" height="95" rx="3" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255,255,255,0.1)" />
+              
+              <!-- Trending line -->
+              <path d="M57 120 L82 100 L107 85 L132 60 L160 50" fill="none" stroke="url(#grad-fin)" stroke-width="3" filter="url(#glow-fin)" />
+              <circle cx="160" cy="50" r="5" fill="hsl(145, 100%, 50%)" />
+            </svg>
+          </div>
+          <div class="card-icon-overlay">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+        </div>
+
+        <!-- Card 4: Commerce -->
+        <div class="sector-card">
+          <div class="card-content">
+            <span class="card-tag" data-tr="Stratejik Karar" data-en="Strategic Decision">Stratejik Karar</span>
+            <h3 class="card-title" data-tr="Ticaret Çözümleri" data-en="Commerce Solutions">Ticaret Çözümleri</h3>
+            <p class="card-desc" data-tr="Talep tahmini, akıllı dinamik fiyatlandırma ve kişiselleştirilmiş müşteri öneri algoritmaları ile satış hacminizi ve verimliliğinizi artırıyoruz." data-en="We increase your sales volume and efficiency with demand forecasting, smart dynamic pricing, and personalized customer recommendation algorithms.">
+              Talep tahmini, akıllı dinamik fiyatlandırma ve kişiselleştirilmiş müşteri öneri algoritmaları ile satış hacminizi ve verimliliğinizi artırıyoruz.
+            </p>
+          </div>
+          <div class="card-visual-wrapper">
+            <svg class="card-visual-art" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-comm" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="hsl(215, 100%, 55%)" />
+                  <stop offset="100%" stop-color="hsl(270, 95%, 65%)" />
+                </linearGradient>
+                <filter id="glow-comm" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <!-- Connecting nodes forming commerce box -->
+              <path d="M100 50 L150 75 L150 125 L100 150 L50 125 L50 75 Z" fill="none" stroke="url(#grad-comm)" stroke-width="2" filter="url(#glow-comm)" />
+              <path d="M100 50 L100 150" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+              <path d="M50 75 L150 125" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+              <path d="M150 75 L50 125" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+              <circle cx="100" cy="50" r="4" fill="white" />
+              <circle cx="150" cy="75" r="4" fill="hsl(215, 100%, 55%)" />
+              <circle cx="150" cy="125" r="4" fill="white" />
+              <circle cx="100" cy="150" r="4" fill="hsl(270, 95%, 65%)" />
+              <circle cx="50" cy="125" r="4" fill="white" />
+              <circle cx="50" cy="75" r="4" fill="hsl(215, 100%, 55%)" />
+            </svg>
+          </div>
+          <div class="card-icon-overlay">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="hakkimizda" style="background: rgba(255,255,255,0.01); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container about-grid">
+      <div class="about-content">
+        <span class="section-label" data-tr="Biz Kimiz?" data-en="Who We Are">Biz Kimiz?</span>
+        <h2 class="section-title" style="margin: 1rem 0 2rem 0;" data-tr="Yapay Zeka ile Geleceği Şekillendiriyoruz" data-en="Shaping the Future with AI">Yapay Zeka ile Geleceği Şekillendiriyoruz</h2>
+        <p class="hero-desc" style="margin-bottom: 1.5rem; max-width: 100%;" data-tr="Bilkan AI Yazılım, 2023 yılında Ankara'da kuruldu. Eğitim, sağlık, finans, borsa, ticaret ve iş dünyasında özelleştirilmiş yapay zeka çözümleri geliştirmekteyiz." data-en="Bilkan AI Software was founded in Ankara in 2023. We develop customized AI solutions in education, healthcare, finance, stock market, commerce, and the business world.">
+          Bilkan AI Yazılım, 2023 yılında Ankara'da kuruldu. Eğitim, sağlık, finans, borsa, ticaret ve iş dünyasında özelleştirilmiş yapay zeka çözümleri geliştirmekteyiz.
+        </p>
+        <p class="hero-desc" style="max-width: 100%;" data-tr="Misyonumuz, yapay zeka teknolojilerini kullanarak çeşitli sektörlerde yenilikçi ve güvenilir çözümler sunmak, operasyonel iş akışlarında karar vericilere en doğru tahminleri sağlayarak iş verimliliğini artırmaktır." data-en="Our mission is to offer innovative and reliable solutions in various sectors using AI technologies, and to increase business efficiency by providing decision-makers with the most accurate predictions in operational workflows.">
+          Misyonumuz, yapay zeka teknolojilerini kullanarak çeşitli sektörlerde yenilikçi ve güvenilir çözümler sunmak, operasyonel iş akışlarında karar vericilere en doğru tahminleri sağlayarak iş verimliliğini artırmaktır.
+        </p>
+      </div>
+
+      <!-- Interactive Mesh info card -->
+      <div class="about-visual">
+        <div class="about-glow"></div>
+        <div class="interactive-mesh">
+          <div class="mesh-row">
+            <span class="mesh-label" data-tr="Kuruluş" data-en="Founded">Kuruluş</span>
+            <span class="mesh-val">2023</span>
+          </div>
+          <div class="mesh-row">
+            <span class="mesh-label" data-tr="Konum" data-en="Location">Konum</span>
+            <span class="mesh-val" data-tr="Ankara, TR" data-en="Ankara, TR">Ankara, TR</span>
+          </div>
+          <div class="mesh-row">
+            <span class="mesh-label" data-tr="Ana Sektörler" data-en="Key Sectors">Ana Sektörler</span>
+            <span class="mesh-val" style="font-size: 0.9rem; text-align: right;" data-tr="Eğitim, Sağlık, Finans, Ticaret" data-en="Education, Healthcare, Finance, Commerce">Eğitim, Sağlık, Finans, Ticaret</span>
+          </div>
+          <div class="mesh-row">
+            <span class="mesh-label" data-tr="Geliştirme Odağı" data-en="Development Focus">Geliştirme Odağı</span>
+            <span class="mesh-val" style="font-size: 0.9rem; text-align: right;" data-tr="Derin Öğrenme, NLP, Kestirimsel Analiz" data-en="Deep Learning, NLP, Predictive Analysis">Derin Öğrenme, NLP, Kestirimsel Analiz</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase / Chart Section -->
+  <section>
+    <div class="container showcase-grid">
+      <div class="showcase-content">
+        <span class="section-label" data-tr="Teknolojik Altyapı" data-en="Infrastructure">Teknolojik Altyapı</span>
+        <h2 class="section-title" style="margin: 1rem 0 1.5rem 0;" data-tr="Model Eğitimi ve Canlı İzleme" data-en="Model Training & Live Monitoring">Model Eğitimi ve Canlı İzleme</h2>
+        <p class="hero-desc" style="max-width: 100%;" data-tr="Geliştirdiğimiz tahminleme ve optimizasyon modelleri sürekli olarak canlı veri akışlarıyla beslenir. Süreç optimizasyonunu, hata kayıp (loss) grafiklerini ve doğruluk oranlarını anlık olarak izliyor ve modellerimizi güncel tutuyoruz." data-en="The forecasting and optimization models we develop are continuously fed with live data streams. We monitor process optimization, loss graphs, and accuracy rates in real-time to keep our models up-to-date.">
+          Geliştirdiğimiz tahminleme ve optimizasyon modelleri sürekli olarak canlı veri akışlarıyla beslenir. Süreç optimizasyonunu, hata kayıp (loss) grafiklerini ve doğruluk oranlarını anlık olarak izliyor ve modellerimizi güncel tutuyoruz.
+        </p>
+      </div>
+
+      <!-- Live Simulated Chart Widget -->
+      <div class="showcase-visual">
+        <div class="widget-header">
+          <span class="widget-title" data-tr="Canlı AI Optimizasyonu" data-en="Live AI Optimization">Canlı AI Optimizasyonu</span>
+          <div style="display: flex; gap: 4px;">
+            <div class="llm-dot" style="background-color: var(--accent-cyan); width: 8px; height: 8px;"></div>
+            <div class="llm-dot" style="background-color: var(--accent-green); width: 8px; height: 8px;"></div>
+          </div>
+        </div>
+        <div class="widget-canvas-container">
+          <canvas class="showcase-canvas"></canvas>
+        </div>
+        <div class="widget-stats">
+          <div class="stat-item">
+            <div class="stat-label" data-tr="Loss (Kayıp)" data-en="Loss">Loss (Kayıp)</div>
+            <div class="stat-value" id="loss-value">0.0142</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label" data-tr="Accuracy (Doğruluk)" data-en="Accuracy">Accuracy (Doğruluk)</div>
+            <div class="stat-value" id="acc-value" style="color: var(--accent-cyan);">99.45%</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label" data-tr="Epoch" data-en="Epoch">Epoch</div>
+            <div class="stat-value" id="epoch-value" style="color: var(--accent-purple);">1024</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 4rem;">
+        <span class="section-label" data-tr="Müşteri Yorumları" data-en="Testimonials">Müşteri Yorumları</span>
+        <h2 class="section-title" data-tr="Güven ve Başarı" data-en="Trust & Success">Güven ve Başarı</h2>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text" data-tr="&quot;Bilkan AI, eğitim ve sağlık alanındaki yapay zeka uygulamaları sayesinde süreçlerimizi hızlandırdı. Çalışmalarından ve desteklerinden çok memnunuz!&quot;" data-en="&quot;Bilkan AI has accelerated our processes thanks to their AI applications in education and healthcare. We are very pleased with their work and support!&quot;">
+          "Bilkan AI, eğitim ve sağlık alanındaki yapay zeka uygulamaları sayesinde süreçlerimizi hızlandırdı. Çalışmalarından ve desteklerinden çok memnunuz!"
+        </p>
+        <div class="testimonial-author" data-tr="Ali Yılmaz" data-en="Ali Yilmaz">Ali Yılmaz</div>
+        <div class="testimonial-rating">★★★★★</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="iletisim">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <div>
+          <span class="section-label" data-tr="Bizimle İletişime Geçin" data-en="Get in Touch">Bizimle İletişime Geçin</span>
+          <h2 class="section-title" style="margin: 1rem 0 1.5rem 0;" data-tr="Projelerinizi Konuşalım" data-en="Let's Talk About Your Projects">Projelerinizi Konuşalım</h2>
+          <p class="hero-desc" style="max-width: 100%;" data-tr="Sektörünüzde yapay zeka entegrasyonu sağlamak veya yeni bir fikir üzerinde çalışmak isterseniz, ekibimiz size destek olmaya hazırdır." data-en="If you want to achieve AI integration in your sector or work on a new idea, our team is ready to support you.">
+            Sektörünüzde yapay zeka entegrasyonu sağlamak veya yeni bir fikir üzerinde çalışmak isterseniz, ekibimiz size destek olmaya hazırdır.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <div class="contact-details">
+            <h4 data-tr="E-posta Adresi" data-en="Email Address">E-posta Adresi</h4>
+            <a href="mailto:afb@aibilkan.com">afb@aibilkan.com</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div class="contact-details">
+            <h4 data-tr="Konum" data-en="Location">Konum</h4>
+            <p data-tr="Teknopark Ankara, İvedik OSB, Ankara, Türkiye" data-en="Teknopark Ankara, Ivedik OSB, Ankara, Turkey">Teknopark Ankara, İvedik OSB, Ankara, Türkiye</p>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed Container -->
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.4024317135073!2d32.748386376569115!3d39.99949987151121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347c617eb3f33%3A0xa19bf91866fa049b!2sTeknopark%20Ankara!5e0!3m2!1str!2str!4v1717288000000!5m2!1str!2str"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form" action="https://formsubmit.co/afb@aibilkan.com" method="POST">
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_subject" value="Bilkan AI Web Sitesi - Yeni İletişim Formu">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-group">
+          <label for="name" data-tr="Adınız Soyadınız" data-en="Your Name">Adınız Soyadınız</label>
+          <input type="text" id="name" name="name" placeholder="Örn: Ali Yılmaz" data-tr-placeholder="Örn: Ali Yılmaz" data-en-placeholder="e.g. John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="email" data-tr="E-posta Adresiniz" data-en="Your Email Address">E-posta Adresiniz</label>
+          <input type="email" id="email" name="email" placeholder="Örn: ali@sirket.com" data-tr-placeholder="Örn: ali@sirket.com" data-en-placeholder="e.g. john@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message" data-tr="Mesajınız" data-en="Your Message">Mesajınız</label>
+          <textarea id="message" name="message" placeholder="Hizmetlerimiz veya iş birliği hakkında mesajınız..." data-tr-placeholder="Hizmetlerimiz veya iş birliği hakkında mesajınız..." data-en-placeholder="Your message about our services or collaboration..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="justify-content: center; width: 100%; border: none; margin-top: 1rem;" data-tr="Gönder" data-en="Send">
+          Gönder
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <a href="#home" class="logo footer-logo">
+        <div class="logo-dot"></div>
+        BILKAN<span>AI</span>
+      </a>
+      <div class="footer-copy" data-tr="© 2026 Bilkan AI. Tüm Hakları Saklıdır." data-en="© 2026 Bilkan AI. All Rights Reserved.">
+        © 2026 Bilkan AI. Tüm Hakları Saklıdır.
+      </div>
+      <div class="footer-links">
+        <a href="#home" data-tr="Anasayfa" data-en="Home">Anasayfa</a>
+        <a href="#hizmetler" data-tr="Hizmetler" data-en="Services">Hizmetler</a>
+        <a href="#sektorler" data-tr="Sektörler" data-en="Sectors">Sektörler</a>
+        <a href="#hakkimizda" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a>
+        <a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
