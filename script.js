@@ -572,11 +572,11 @@ async function initHeroTypewriter() {
    6. CLEAN URL SPA-LIKE ROUTING AND SMOOTH SCROLL SYSTEM
    ========================================================================= */
 function initCleanRouting() {
-  const cleanPaths = ['/hizmetler', '/sektorler', '/hakkimizda', '/iletisim', '/'];
+  const cleanPaths = ['/hizmetler', '/sektorler', '/hakkimizda', '/iletisim', '/home', '/'];
   
   // Helper to scroll to section
   function scrollToPath(path, smooth = true) {
-    if (path === '/' || path === '') {
+    if (path === '/' || path === '' || path === '/home') {
       window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
       return;
     }
@@ -594,10 +594,26 @@ function initCleanRouting() {
     }
   }
 
-  // Handle initial page load
+  // Handle legacy hash URLs on load
+  const hash = window.location.hash;
+  if (hash) {
+    if (hash === '#home') {
+      history.replaceState(null, '', '/');
+    } else {
+      const cleanPath = '/' + hash.substring(1);
+      if (cleanPaths.includes(cleanPath)) {
+        history.replaceState(null, '', cleanPath);
+        setTimeout(() => {
+          scrollToPath(cleanPath, false);
+        }, 500);
+      }
+    }
+  }
+
+  // Handle initial page load (for clean pathnames)
   const initialPath = window.location.pathname;
   if (cleanPaths.includes(initialPath)) {
-    if (initialPath !== '/' && initialPath !== '') {
+    if (initialPath !== '/' && initialPath !== '' && initialPath !== '/home') {
       // Wait a short time for dynamic content/typewriter to settle, then scroll
       setTimeout(() => {
         scrollToPath(initialPath, false);
@@ -637,6 +653,23 @@ function initCleanRouting() {
     const path = window.location.pathname;
     if (cleanPaths.includes(path)) {
       scrollToPath(path, true);
+    }
+  });
+
+  // Handle any runtime hash change (e.g. if a link tries to force a hash)
+  window.addEventListener('hashchange', () => {
+    const hash = window.location.hash;
+    if (hash) {
+      if (hash === '#home') {
+        history.replaceState(null, '', '/');
+        scrollToPath('/', true);
+      } else {
+        const cleanPath = '/' + hash.substring(1);
+        if (cleanPaths.includes(cleanPath)) {
+          history.replaceState(null, '', cleanPath);
+          scrollToPath(cleanPath, true);
+        }
+      }
     }
   });
 }

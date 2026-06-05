@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/home", "destination": "/" },
     { "source": "/hizmetler", "destination": "/" },
     { "source": "/sektorler", "destination": "/" },
     { "source": "/hakkimizda", "destination": "/" },
