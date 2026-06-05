@@ -1,3 +1,9 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/hizmetler", "destination": "/" },
+    { "source": "/sektorler", "destination": "/" },
+    { "source": "/hakkimizda", "destination": "/" },
+    { "source": "/iletisim", "destination": "/" }
+  ]
 }

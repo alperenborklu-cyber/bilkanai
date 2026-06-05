@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLlmTypewriter();
   init3DTilt();
   initShowcaseWidget();
+  initCleanRouting();
 });
 
 /* =========================================================================
@@ -565,4 +566,77 @@ async function initHeroTypewriter() {
   
   // Set typewriter done flag so that future language toggling translates hero texts instantly
   window.typewriterDone = true;
+}
+
+/* =========================================================================
+   6. CLEAN URL SPA-LIKE ROUTING AND SMOOTH SCROLL SYSTEM
+   ========================================================================= */
+function initCleanRouting() {
+  const cleanPaths = ['/hizmetler', '/sektorler', '/hakkimizda', '/iletisim', '/'];
+  
+  // Helper to scroll to section
+  function scrollToPath(path, smooth = true) {
+    if (path === '/' || path === '') {
+      window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+      return;
+    }
+    const targetId = path.startsWith('/') ? path.substring(1) : path;
+    const element = document.getElementById(targetId);
+    if (element) {
+      const headerOffset = 80; // approximate sticky header height
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: smooth ? 'smooth' : 'auto'
+      });
+    }
+  }
+
+  // Handle initial page load
+  const initialPath = window.location.pathname;
+  if (cleanPaths.includes(initialPath)) {
+    if (initialPath !== '/' && initialPath !== '') {
+      // Wait a short time for dynamic content/typewriter to settle, then scroll
+      setTimeout(() => {
+        scrollToPath(initialPath, false);
+      }, 500);
+    }
+  }
+
+  // Intercept click on links targeting clean paths
+  document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('a');
+    if (!anchor) return;
+
+    const href = anchor.getAttribute('href');
+    if (!href) return;
+
+    try {
+      const url = new URL(anchor.href, window.location.href);
+      if (url.origin !== window.location.origin) return;
+
+      const path = url.pathname;
+      if (cleanPaths.includes(path)) {
+        // Intercept only on the index page where sections actually exist
+        const isIndexPage = document.getElementById('hizmetler') !== null;
+        if (isIndexPage) {
+          e.preventDefault();
+          history.pushState(null, '', path);
+          scrollToPath(path, true);
+        }
+      }
+    } catch (err) {
+      // Ignore URL parsing errors
+    }
+  });
+
+  // Handle back/forward navigation
+  window.addEventListener('popstate', () => {
+    const path = window.location.pathname;
+    if (cleanPaths.includes(path)) {
+      scrollToPath(path, true);
+    }
+  });
 }

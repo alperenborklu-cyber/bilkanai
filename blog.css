@@ -496,3 +496,8 @@
     gap: 1rem;
   }
 }
+
+.footer-credit a:hover {
+  color: var(--accent-purple) !important;
+  text-decoration: underline !important;
+}
